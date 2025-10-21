@@ -1,0 +1,6006 @@
+{
+  "players": {
+    "1066d1af-e51f-4f36-b990-6d966bc670ba": {
+      "name": "blankenship",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        22.0,
+        15.0,
+        15.0,
+        22.0,
+        15.0,
+        15.0
+      ],
+      "consecutive_absences": 7,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "98e3cdfa-4422-49c3-b6b1-4d04a6616872": {
+      "name": "aaron fowler",
+      "age": 50,
+      "initial_quota": 34,
+      "rounds": [
+        34.0,
+        28.0,
+        27.0,
+        34.0,
+        28.0,
+        27.0
+      ],
+      "consecutive_absences": 7,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "244a2ff0-9962-431d-988e-e5067606abe2": {
+      "name": "adam jackson",
+      "age": 50,
+      "initial_quota": 16,
+      "rounds": [
+        15.0,
+        16.0,
+        13.0,
+        11.0,
+        15.0,
+        14.0,
+        14.0,
+        19.0,
+        19.0,
+        16.0,
+        16.0,
+        20.0,
+        15.0,
+        16.0,
+        13.0,
+        11.0,
+        15.0,
+        14.0,
+        14.0,
+        19.0,
+        19.0,
+        16.0,
+        16.0,
+        20.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "7c26243f-8c75-4009-bddd-44fe706f1f5a": {
+      "name": "andy dodson",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        25.0,
+        27.0,
+        23.0,
+        30.0,
+        34.0,
+        35.0,
+        30.0,
+        32.0,
+        32.0,
+        28.0,
+        24.0,
+        31.0,
+        29.0,
+        27.0,
+        31.0,
+        25.0,
+        27.0,
+        23.0,
+        30.0,
+        34.0,
+        35.0,
+        30.0,
+        32.0,
+        32.0,
+        28.0,
+        24.0,
+        31.0,
+        29.0,
+        27.0,
+        31.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "ec9f330c-8391-4039-9b77-aabaf7250145": {
+      "name": "andy stilts",
+      "age": 50,
+      "initial_quota": 15,
+      "rounds": [
+        19.0,
+        12.0,
+        7.0,
+        13.0,
+        11.0,
+        15.0,
+        13.0,
+        17.0,
+        11.0,
+        26.0,
+        15.0,
+        20.0,
+        22.0,
+        21.0,
+        16.0,
+        19.0,
+        12.0,
+        7.0,
+        13.0,
+        11.0,
+        15.0,
+        13.0,
+        17.0,
+        11.0,
+        26.0,
+        15.0,
+        20.0,
+        22.0,
+        21.0,
+        16.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "510b9339-48d6-45b5-b19c-e72ec41495d2": {
+      "name": "b brackfield",
+      "age": 65,
+      "initial_quota": 25,
+      "rounds": [
+        25.0,
+        21.0,
+        22.0,
+        26.0,
+        30.0,
+        24.0,
+        16.0,
+        17.0,
+        15.0,
+        25.0,
+        21.0,
+        22.0,
+        26.0,
+        30.0,
+        24.0,
+        16.0,
+        17.0,
+        15.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f2e86063-04d1-43b8-a41f-7fb1b001010b": {
+      "name": "barry spuce",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        21.0,
+        12.0,
+        26.0,
+        21.0,
+        12.0,
+        26.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d84bf5eb-8a52-4f5d-96ca-124da142a9c7": {
+      "name": "bill bozeman",
+      "age": 65,
+      "initial_quota": 18,
+      "rounds": [
+        16.0,
+        18.0,
+        0.0,
+        20.0,
+        18.0,
+        18.0,
+        15.0,
+        25.0,
+        21.0,
+        21.0,
+        19.0,
+        19.0,
+        16.0,
+        18.0,
+        0.0,
+        20.0,
+        18.0,
+        18.0,
+        15.0,
+        25.0,
+        21.0,
+        21.0,
+        19.0,
+        19.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "0215b7d9-9dd0-45e9-9749-8bd55dacdf26": {
+      "name": "bill bruce",
+      "age": 65,
+      "initial_quota": 16,
+      "rounds": [
+        16.0,
+        8.0,
+        14.0,
+        12.0,
+        19.0,
+        19.0,
+        8.0,
+        7.0,
+        17.0,
+        16.0,
+        8.0,
+        14.0,
+        12.0,
+        19.0,
+        19.0,
+        8.0,
+        7.0,
+        17.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a1131332-bd32-453a-881b-3f71f3389c3b": {
+      "name": "bill dockter",
+      "age": 65,
+      "initial_quota": 22,
+      "rounds": [
+        23.0,
+        20.0,
+        22.0,
+        21.0,
+        19.0,
+        23.0,
+        18.0,
+        16.0,
+        19.0,
+        23.0,
+        21.0,
+        20.0,
+        21.0,
+        19.0,
+        22.0,
+        23.0,
+        20.0,
+        22.0,
+        21.0,
+        19.0,
+        23.0,
+        18.0,
+        16.0,
+        19.0,
+        23.0,
+        21.0,
+        20.0,
+        21.0,
+        19.0,
+        22.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "18e3096b-7f87-4429-ac38-c30e7636fd33": {
+      "name": "bobby perkinson",
+      "age": 80,
+      "initial_quota": 29,
+      "rounds": [
+        27.0,
+        31.0,
+        32.0,
+        25.0,
+        28.0,
+        26.0,
+        19.0,
+        21.0,
+        21.0,
+        27.0,
+        23.0,
+        21.0,
+        27.0,
+        31.0,
+        32.0,
+        25.0,
+        28.0,
+        26.0,
+        19.0,
+        21.0,
+        21.0,
+        27.0,
+        23.0,
+        21.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5f33803c-0aba-433f-8f49-da6fbc238d02": {
+      "name": "brad pesterfield",
+      "age": 50,
+      "initial_quota": 34,
+      "rounds": [
+        29.0,
+        37.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        34.0,
+        37.0,
+        38.0,
+        31.0,
+        34.0,
+        30.0,
+        29.0,
+        37.0,
+        30.0,
+        30.0,
+        30.0,
+        30.0,
+        34.0,
+        37.0,
+        38.0,
+        31.0,
+        34.0,
+        30.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "c660a300-0b83-4c50-aec9-2979633183f7": {
+      "name": "brandon panich",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        30.0,
+        26.0,
+        16.0,
+        15.0,
+        28.0,
+        24.0,
+        23.0,
+        29.0,
+        25.0,
+        30.0,
+        26.0,
+        16.0,
+        15.0,
+        28.0,
+        24.0,
+        23.0,
+        29.0,
+        25.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a7de17bf-4e13-447a-b4e6-853d90e1ebd2": {
+      "name": "brian floyd",
+      "age": 50,
+      "initial_quota": 22,
+      "rounds": [
+        21.0,
+        18.0,
+        23.0,
+        20.0,
+        19.0,
+        26.0,
+        16.0,
+        20.0,
+        24.0,
+        27.0,
+        25.0,
+        24.0,
+        21.0,
+        18.0,
+        23.0,
+        20.0,
+        19.0,
+        26.0,
+        16.0,
+        20.0,
+        24.0,
+        27.0,
+        25.0,
+        24.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "94179179-2007-48fb-bc7f-d1c8c78683f1": {
+      "name": "bruce chitwood",
+      "age": 65,
+      "initial_quota": 27,
+      "rounds": [
+        22.0,
+        24.0,
+        27.0,
+        15.0,
+        18.0,
+        24.0,
+        34.0,
+        25.0,
+        25.0,
+        22.0,
+        24.0,
+        27.0,
+        15.0,
+        18.0,
+        24.0,
+        34.0,
+        25.0,
+        25.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "9c059f7b-40d5-4fe6-8196-a5b4184d561d": {
+      "name": "bucky buchanan",
+      "age": 50,
+      "initial_quota": 21,
+      "rounds": [
+        18.0,
+        19.0,
+        17.0,
+        13.0,
+        16.0,
+        16.0,
+        18.0,
+        19.0,
+        17.0,
+        13.0,
+        16.0,
+        16.0
+      ],
+      "consecutive_absences": 6,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "2572c5ea-f2d4-4fda-af02-4a2db4161855": {
+      "name": "buddy fisher",
+      "age": 65,
+      "initial_quota": 14,
+      "rounds": [
+        8.0,
+        15.0,
+        12.0,
+        11.0,
+        15.0,
+        12.0,
+        18.0,
+        21.0,
+        6.0,
+        18.0,
+        10.0,
+        17.0,
+        8.0,
+        15.0,
+        12.0,
+        11.0,
+        15.0,
+        12.0,
+        18.0,
+        21.0,
+        6.0,
+        18.0,
+        10.0,
+        17.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "2e007091-36b1-402e-967e-30a7e701dbf8": {
+      "name": "cameron liford",
+      "age": 50,
+      "initial_quota": 14,
+      "rounds": [
+        12.0,
+        12.0,
+        12.0,
+        15.0,
+        11.0,
+        18.0,
+        17.0,
+        14.0,
+        10.0,
+        12.0,
+        12.0,
+        12.0,
+        15.0,
+        11.0,
+        18.0,
+        17.0,
+        14.0,
+        10.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3dec77b9-1510-4655-a57c-1bf06a9dc98e": {
+      "name": "chad smith",
+      "age": 50,
+      "initial_quota": 20,
+      "rounds": [
+        11.0,
+        12.0,
+        13.0,
+        17.0,
+        16.0,
+        17.0,
+        14.0,
+        11.0,
+        15.0,
+        11.0,
+        12.0,
+        13.0,
+        17.0,
+        16.0,
+        17.0,
+        14.0,
+        11.0,
+        15.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e9d43728-c9cd-447b-aefb-858b595756b9": {
+      "name": "chase white",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        23.0,
+        22.0,
+        22.0,
+        26.0,
+        28.0,
+        23.0,
+        23.0,
+        22.0,
+        22.0,
+        26.0,
+        28.0,
+        23.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "1950b491-b8f5-4ac9-be38-adfd2724b913": {
+      "name": "chris fry",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        27.0,
+        25.0,
+        21.0,
+        27.0,
+        25.0,
+        21.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5f6409ef-a2ae-4708-9ae3-b010e6769933": {
+      "name": "chuck walker",
+      "age": 50,
+      "initial_quota": 25,
+      "rounds": [
+        22.0,
+        29.0,
+        12.0,
+        18.0,
+        26.0,
+        21.0,
+        23.0,
+        17.0,
+        20.0,
+        22.0,
+        29.0,
+        12.0,
+        18.0,
+        26.0,
+        21.0,
+        23.0,
+        17.0,
+        20.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "7ca33538-f805-49a8-82fa-7d20a357f0ba": {
+      "name": "clifford walker",
+      "age": 65,
+      "initial_quota": 13,
+      "rounds": [
+        7.0,
+        9.0,
+        10.0,
+        17.0,
+        17.0,
+        12.0,
+        7.0,
+        9.0,
+        10.0,
+        17.0,
+        17.0,
+        12.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e3ba7e15-d93d-4a0a-bfb8-2f1577cca23b": {
+      "name": "cory dodson",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        29.0,
+        21.0,
+        28.0,
+        24.0,
+        23.0,
+        20.0,
+        24.0,
+        26.0,
+        25.0,
+        29.0,
+        21.0,
+        28.0,
+        24.0,
+        23.0,
+        20.0,
+        24.0,
+        26.0,
+        25.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "38becf4f-9188-4e3c-9592-85459d5820be": {
+      "name": "craig garrett",
+      "age": 65,
+      "initial_quota": 31,
+      "rounds": [
+        26.0,
+        23.0,
+        19.0,
+        27.0,
+        26.0,
+        28.0,
+        26.0,
+        28.0,
+        29.0,
+        33.0,
+        32.0,
+        31.0,
+        26.0,
+        23.0,
+        19.0,
+        27.0,
+        26.0,
+        28.0,
+        26.0,
+        28.0,
+        29.0,
+        33.0,
+        32.0,
+        31.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3afd9daa-6b8e-4769-8b2d-339054e9e486": {
+      "name": "d thompson",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        28.0,
+        36.0,
+        30.0,
+        28.0,
+        34.0,
+        27.0,
+        27.0,
+        30.0,
+        24.0,
+        28.0,
+        36.0,
+        30.0,
+        28.0,
+        34.0,
+        27.0,
+        27.0,
+        30.0,
+        24.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "94abfb58-f643-4d38-8add-69d579baa284": {
+      "name": "dan holloway",
+      "age": 50,
+      "initial_quota": 14,
+      "rounds": [
+        11.0,
+        15.0,
+        14.0,
+        9.0,
+        12.0,
+        14.0,
+        16.0,
+        12.0,
+        11.0,
+        17.0,
+        9.0,
+        12.0,
+        11.0,
+        15.0,
+        14.0,
+        9.0,
+        12.0,
+        14.0,
+        16.0,
+        12.0,
+        11.0,
+        17.0,
+        9.0,
+        12.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "75fc62a9-7d80-4493-bb66-17a145a6919c": {
+      "name": "dan murphy",
+      "age": 50,
+      "initial_quota": 22,
+      "rounds": [
+        14.0,
+        13.0,
+        19.0,
+        13.0,
+        20.0,
+        16.0,
+        14.0,
+        13.0,
+        19.0,
+        13.0,
+        20.0,
+        16.0
+      ],
+      "consecutive_absences": 6,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5ede6f01-eab9-4d12-9dc0-41b135be6bc4": {
+      "name": "daniel parker",
+      "age": 50,
+      "initial_quota": 23,
+      "rounds": [
+        23.0,
+        30.0,
+        21.0,
+        14.0,
+        18.0,
+        20.0,
+        25.0,
+        18.0,
+        20.0,
+        23.0,
+        30.0,
+        21.0,
+        14.0,
+        18.0,
+        20.0,
+        25.0,
+        18.0,
+        20.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "2466af3d-ffc8-4f18-bf34-6126ee5bed02": {
+      "name": "daniel ramsey",
+      "age": 50,
+      "initial_quota": 29,
+      "rounds": [
+        12.0,
+        23.0,
+        16.0,
+        12.0,
+        23.0,
+        16.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f87a74b9-0e67-4af0-af7f-fb3bd00beb7e": {
+      "name": "darin patterson",
+      "age": 50,
+      "initial_quota": 34,
+      "rounds": [
+        30.0,
+        22.0,
+        31.0,
+        30.0,
+        35.0,
+        0.0,
+        30.0,
+        22.0,
+        31.0,
+        30.0,
+        35.0,
+        0.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f82226c0-44af-4219-a31b-b2f62fc9a111": {
+      "name": "david hitch",
+      "age": 65,
+      "initial_quota": 26,
+      "rounds": [
+        28.0,
+        27.0,
+        29.0,
+        21.0,
+        18.0,
+        16.0,
+        17.0,
+        25.0,
+        23.0,
+        28.0,
+        27.0,
+        29.0,
+        21.0,
+        18.0,
+        16.0,
+        17.0,
+        25.0,
+        23.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e7b865c5-6eba-4281-89f1-5f6c9edd2a13": {
+      "name": "david houser",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        25.0,
+        22.0,
+        21.0,
+        22.0,
+        22.0,
+        33.0,
+        25.0,
+        22.0,
+        21.0,
+        22.0,
+        22.0,
+        33.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "b1070744-3027-4aca-9aa0-0d4cc8d275e8": {
+      "name": "david jones",
+      "age": 65,
+      "initial_quota": 15,
+      "rounds": [
+        19.0,
+        11.0,
+        19.0,
+        12.0,
+        8.0,
+        14.0,
+        11.0,
+        8.0,
+        17.0,
+        10.0,
+        5.0,
+        8.0,
+        19.0,
+        11.0,
+        19.0,
+        12.0,
+        8.0,
+        14.0,
+        11.0,
+        8.0,
+        17.0,
+        10.0,
+        5.0,
+        8.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "ec0c8421-2ed1-4f66-9919-768a60b41f5d": {
+      "name": "david marsh",
+      "age": 65,
+      "initial_quota": 28,
+      "rounds": [
+        28.0,
+        22.0,
+        29.0,
+        26.0,
+        27.0,
+        16.0,
+        28.0,
+        22.0,
+        29.0,
+        26.0,
+        27.0,
+        16.0
+      ],
+      "consecutive_absences": 6,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "b2c17968-2247-4cfd-a08f-4804d435cab1": {
+      "name": "david pitchford",
+      "age": 65,
+      "initial_quota": 16,
+      "rounds": [
+        15.0,
+        11.0,
+        15.0,
+        20.0,
+        11.0,
+        14.0,
+        12.0,
+        16.0,
+        14.0,
+        10.0,
+        10.0,
+        11.0,
+        15.0,
+        11.0,
+        15.0,
+        20.0,
+        11.0,
+        14.0,
+        12.0,
+        16.0,
+        14.0,
+        10.0,
+        10.0,
+        11.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "53d0d435-2c5b-4a94-ac34-62cc2efd1eaf": {
+      "name": "denny garner",
+      "age": 50,
+      "initial_quota": 21,
+      "rounds": [
+        18.0,
+        23.0,
+        19.0,
+        22.0,
+        12.0,
+        21.0,
+        25.0,
+        26.0,
+        27.0,
+        24.0,
+        27.0,
+        25.0,
+        18.0,
+        23.0,
+        19.0,
+        22.0,
+        12.0,
+        21.0,
+        25.0,
+        26.0,
+        27.0,
+        24.0,
+        27.0,
+        25.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f7a73b88-a3a6-4f15-b294-5552265724f0": {
+      "name": "derrik calkin",
+      "age": 50,
+      "initial_quota": 28,
+      "rounds": [
+        27.0,
+        22.0,
+        22.0,
+        33.0,
+        31.0,
+        30.0,
+        22.0,
+        21.0,
+        19.0,
+        27.0,
+        22.0,
+        22.0,
+        33.0,
+        31.0,
+        30.0,
+        22.0,
+        21.0,
+        19.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "49861073-9623-4781-adc2-72659abe2996": {
+      "name": "dewey finley",
+      "age": 65,
+      "initial_quota": 19,
+      "rounds": [
+        9.0,
+        15.0,
+        20.0,
+        15.0,
+        20.0,
+        19.0,
+        9.0,
+        15.0,
+        20.0,
+        15.0,
+        20.0,
+        19.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "c52aabf7-b599-4cad-be72-9ddc1ee8cc7f": {
+      "name": "don bumgarner",
+      "age": 50,
+      "initial_quota": 19,
+      "rounds": [
+        18.0,
+        24.0,
+        12.0,
+        16.0,
+        13.0,
+        16.0,
+        23.0,
+        28.0,
+        18.0,
+        18.0,
+        24.0,
+        12.0,
+        16.0,
+        13.0,
+        16.0,
+        23.0,
+        28.0,
+        18.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a513148b-e25a-48d3-a57c-f296b6015499": {
+      "name": "drew jost",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        23.0,
+        32.0,
+        24.0,
+        23.0,
+        32.0,
+        24.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "6936c05f-7903-460c-816c-27cd3b9385a4": {
+      "name": "e king",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        16.0,
+        16.0,
+        22.0,
+        16.0,
+        16.0,
+        22.0
+      ],
+      "consecutive_absences": 7,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "27666889-80b5-4977-b95b-a120f275a95a": {
+      "name": "eddie ballard",
+      "age": 65,
+      "initial_quota": 19,
+      "rounds": [
+        26.0,
+        15.0,
+        20.0,
+        18.0,
+        13.0,
+        15.0,
+        19.0,
+        15.0,
+        18.0,
+        15.0,
+        11.0,
+        11.0,
+        26.0,
+        15.0,
+        20.0,
+        18.0,
+        13.0,
+        15.0,
+        19.0,
+        15.0,
+        18.0,
+        15.0,
+        11.0,
+        11.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "8ca3a584-e501-461e-b73c-7d7f80204987": {
+      "name": "Eric Harrell",
+      "age": 50,
+      "initial_quota": 13,
+      "rounds": [
+        0.0,
+        8.0,
+        9.0,
+        6.0,
+        7.0,
+        12.0,
+        0.0,
+        8.0,
+        9.0,
+        6.0,
+        7.0,
+        12.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "256ec882-362b-4d4d-bf6a-458c3a07b347": {
+      "name": "fred houchins",
+      "age": 65,
+      "initial_quota": 22,
+      "rounds": [
+        23.0,
+        16.0,
+        20.0,
+        17.0,
+        20.0,
+        20.0,
+        26.0,
+        20.0,
+        24.0,
+        23.0,
+        16.0,
+        20.0,
+        17.0,
+        20.0,
+        20.0,
+        26.0,
+        20.0,
+        24.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "af46d924-ecc3-40a3-b346-45bdd92e7058": {
+      "name": "g clarkson",
+      "age": 65,
+      "initial_quota": 19,
+      "rounds": [
+        20.0,
+        18.0,
+        23.0,
+        15.0,
+        14.0,
+        17.0,
+        18.0,
+        14.0,
+        18.0,
+        20.0,
+        18.0,
+        23.0,
+        15.0,
+        14.0,
+        17.0,
+        18.0,
+        14.0,
+        18.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "56d58182-5a4f-4f54-89f6-ae9298a56266": {
+      "name": "gary martin",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        23.0,
+        19.0,
+        20.0,
+        12.0,
+        26.0,
+        25.0,
+        29.0,
+        24.0,
+        26.0,
+        17.0,
+        25.0,
+        20.0,
+        23.0,
+        19.0,
+        20.0,
+        12.0,
+        26.0,
+        25.0,
+        29.0,
+        24.0,
+        26.0,
+        17.0,
+        25.0,
+        20.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "32c12c58-59be-4ebe-bc6f-210aa59489be": {
+      "name": "glenn spangler",
+      "age": 80,
+      "initial_quota": 10,
+      "rounds": [
+        8.0,
+        10.0,
+        11.0,
+        11.0,
+        5.0,
+        9.0,
+        7.0,
+        5.0,
+        3.0,
+        1.0,
+        5.0,
+        9.0,
+        8.0,
+        10.0,
+        11.0,
+        11.0,
+        5.0,
+        9.0,
+        7.0,
+        5.0,
+        3.0,
+        1.0,
+        5.0,
+        9.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "208e03bb-767c-4a7c-8267-ea13b8513729": {
+      "name": "greg gervin",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        32.0,
+        18.0,
+        23.0,
+        30.0,
+        22.0,
+        29.0,
+        31.0,
+        32.0,
+        30.0,
+        32.0,
+        18.0,
+        23.0,
+        30.0,
+        22.0,
+        29.0,
+        31.0,
+        32.0,
+        30.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "1330355b-b7e0-441a-932b-7027b1c5aace": {
+      "name": "greg martin",
+      "age": 50,
+      "initial_quota": 28,
+      "rounds": [
+        24.0,
+        26.0,
+        29.0,
+        24.0,
+        26.0,
+        29.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f7e924e7-7b03-46ad-aa6f-e2eb0b9cb0e3": {
+      "name": "hunter floyd",
+      "age": 50,
+      "initial_quota": 32,
+      "rounds": [
+        25.0,
+        29.0,
+        28.0,
+        25.0,
+        29.0,
+        28.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "32aca080-4817-44dd-bd3a-b4ba4d87e0a4": {
+      "name": "imad kashif",
+      "age": 50,
+      "initial_quota": 18,
+      "rounds": [
+        15.0,
+        19.0,
+        26.0,
+        8.0,
+        17.0,
+        12.0,
+        13.0,
+        9.0,
+        18.0,
+        19.0,
+        12.0,
+        11.0,
+        15.0,
+        19.0,
+        26.0,
+        8.0,
+        17.0,
+        12.0,
+        13.0,
+        9.0,
+        18.0,
+        19.0,
+        12.0,
+        11.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "41e30d7e-2453-46b1-a4b8-7b74d5149665": {
+      "name": "j fusaro",
+      "age": 50,
+      "initial_quota": 13,
+      "rounds": [
+        10.0,
+        11.0,
+        17.0,
+        9.0,
+        11.0,
+        7.0,
+        5.0,
+        16.0,
+        11.0,
+        10.0,
+        11.0,
+        17.0,
+        9.0,
+        11.0,
+        7.0,
+        5.0,
+        16.0,
+        11.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "7f06cd53-fe7f-432b-8b41-da8424594782": {
+      "name": "j hodnett",
+      "age": 50,
+      "initial_quota": 18,
+      "rounds": [
+        16.0,
+        18.0,
+        12.0,
+        24.0,
+        19.0,
+        15.0,
+        12.0,
+        16.0,
+        8.0,
+        16.0,
+        18.0,
+        12.0,
+        24.0,
+        19.0,
+        15.0,
+        12.0,
+        16.0,
+        8.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "534c8dbb-595f-414d-9d1a-8012092a3dba": {
+      "name": "doc gillespie",
+      "age": 80,
+      "initial_quota": 27,
+      "rounds": [
+        30.0,
+        26.0,
+        0.0,
+        25.0,
+        23.0,
+        24.0,
+        25.0,
+        27.0,
+        26.0,
+        30.0,
+        26.0,
+        0.0,
+        25.0,
+        23.0,
+        24.0,
+        25.0,
+        27.0,
+        26.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": {
+      "name": "jamie davis",
+      "age": 50,
+      "initial_quota": 28,
+      "rounds": [
+        21.0,
+        25.0,
+        29.0,
+        24.0,
+        26.0,
+        33.0,
+        23.0,
+        30.0,
+        29.0,
+        27.0,
+        33.0,
+        27.0,
+        25.0,
+        31.0,
+        32.0,
+        21.0,
+        25.0,
+        29.0,
+        24.0,
+        26.0,
+        33.0,
+        23.0,
+        30.0,
+        29.0,
+        27.0,
+        33.0,
+        27.0,
+        25.0,
+        31.0,
+        32.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "4315f8ba-87e2-4f1c-9a9c-8b3f2fabe24e": {
+      "name": "jeff ewing",
+      "age": 50,
+      "initial_quota": 14,
+      "rounds": [
+        11.0,
+        7.0,
+        7.0,
+        13.0,
+        8.0,
+        8.0,
+        16.0,
+        12.0,
+        7.0,
+        11.0,
+        7.0,
+        7.0,
+        13.0,
+        8.0,
+        8.0,
+        16.0,
+        12.0,
+        7.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "87d13488-9652-4b54-9cc6-f13d88152117": {
+      "name": "jeff jost",
+      "age": 50,
+      "initial_quota": 28,
+      "rounds": [
+        29.0,
+        21.0,
+        28.0,
+        29.0,
+        21.0,
+        28.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": {
+      "name": "jeff smith",
+      "age": 50,
+      "initial_quota": 29,
+      "rounds": [
+        24.0,
+        32.0,
+        22.0,
+        21.0,
+        32.0,
+        30.0,
+        22.0,
+        31.0,
+        33.0,
+        24.0,
+        25.0,
+        35.0,
+        32.0,
+        31.0,
+        28.0,
+        24.0,
+        32.0,
+        22.0,
+        21.0,
+        32.0,
+        30.0,
+        22.0,
+        31.0,
+        33.0,
+        24.0,
+        25.0,
+        35.0,
+        32.0,
+        31.0,
+        28.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d684aca1-0195-4028-95de-88d1d46ad4e6": {
+      "name": "jerry hankins",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        17.0,
+        13.0,
+        10.0,
+        17.0,
+        13.0,
+        10.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "179b7e80-822a-4f2b-849b-e3e2ff792e4e": {
+      "name": "jim mcbrearty",
+      "age": 65,
+      "initial_quota": 20,
+      "rounds": [
+        26.0,
+        16.0,
+        18.0,
+        19.0,
+        17.0,
+        16.0,
+        25.0,
+        17.0,
+        15.0,
+        26.0,
+        16.0,
+        18.0,
+        19.0,
+        17.0,
+        16.0,
+        25.0,
+        17.0,
+        15.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "db9be750-2292-4ba3-b48c-9f02ef6451bd": {
+      "name": "jim vessell",
+      "age": 65,
+      "initial_quota": 31,
+      "rounds": [
+        29.0,
+        24.0,
+        26.0,
+        35.0,
+        27.0,
+        33.0,
+        31.0,
+        30.0,
+        26.0,
+        25.0,
+        27.0,
+        28.0,
+        29.0,
+        24.0,
+        26.0,
+        35.0,
+        27.0,
+        33.0,
+        31.0,
+        30.0,
+        26.0,
+        25.0,
+        27.0,
+        28.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "397f524a-ecf6-44c8-abc0-c86ccec4705b": {
+      "name": "joe anderson",
+      "age": 50,
+      "initial_quota": 10,
+      "rounds": [
+        1.0,
+        8.0,
+        9.0,
+        1.0,
+        8.0,
+        5.0,
+        10.0,
+        8.0,
+        8.0,
+        7.0,
+        11.0,
+        13.0,
+        1.0,
+        8.0,
+        9.0,
+        1.0,
+        8.0,
+        5.0,
+        10.0,
+        8.0,
+        8.0,
+        7.0,
+        11.0,
+        13.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "09b3e672-95a4-409d-ad24-82a05243aca5": {
+      "name": "joe hall",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        19.0,
+        16.0,
+        13.0,
+        28.0,
+        27.0,
+        31.0,
+        20.0,
+        21.0,
+        26.0,
+        19.0,
+        16.0,
+        13.0,
+        28.0,
+        27.0,
+        31.0,
+        20.0,
+        21.0,
+        26.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a43e6cec-4ad6-4d9f-9cce-614e18306833": {
+      "name": "joe potter",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        15.0,
+        25.0,
+        18.0,
+        29.0,
+        28.0,
+        31.0,
+        31.0,
+        32.0,
+        28.0,
+        25.0,
+        22.0,
+        30.0,
+        26.0,
+        22.0,
+        29.0,
+        15.0,
+        25.0,
+        18.0,
+        29.0,
+        28.0,
+        31.0,
+        31.0,
+        32.0,
+        28.0,
+        25.0,
+        22.0,
+        30.0,
+        26.0,
+        22.0,
+        29.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "47e854de-50d4-49cc-9255-8724f246b033": {
+      "name": "john garrett",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        27.0,
+        25.0,
+        25.0,
+        28.0,
+        32.0,
+        34.0,
+        32.0,
+        31.0,
+        23.0,
+        27.0,
+        25.0,
+        25.0,
+        28.0,
+        32.0,
+        34.0,
+        32.0,
+        31.0,
+        23.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "62ac02b4-a34c-430b-9e61-f7dc78e28f8b": {
+      "name": "john graves",
+      "age": 50,
+      "initial_quota": 21,
+      "rounds": [
+        15.0,
+        16.0,
+        13.0,
+        15.0,
+        19.0,
+        19.0,
+        15.0,
+        15.0,
+        11.0,
+        15.0,
+        16.0,
+        13.0,
+        15.0,
+        19.0,
+        19.0,
+        15.0,
+        15.0,
+        11.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "2168fb73-464d-4a6c-b009-d605a9c1fd15": {
+      "name": "jonathan coffield",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        28.0,
+        27.0,
+        22.0,
+        19.0,
+        23.0,
+        22.0,
+        30.0,
+        30.0,
+        28.0,
+        28.0,
+        27.0,
+        22.0,
+        19.0,
+        23.0,
+        22.0,
+        30.0,
+        30.0,
+        28.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3e268adc-ee81-49cd-bc40-b741752be971": {
+      "name": "josh vorasi",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        21.0,
+        23.0,
+        21.0,
+        26.0,
+        27.0,
+        37.0,
+        22.0,
+        21.0,
+        21.0,
+        21.0,
+        23.0,
+        21.0,
+        26.0,
+        27.0,
+        37.0,
+        22.0,
+        21.0,
+        21.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "928af2c1-bbf1-4cba-a00e-112e0b7ba551": {
+      "name": "keith edmonds",
+      "age": 50,
+      "initial_quota": 17,
+      "rounds": [
+        12.0,
+        17.0,
+        10.0,
+        12.0,
+        17.0,
+        10.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "92d4839d-3e86-4c7c-aae0-5b720630b279": {
+      "name": "keith pankey",
+      "age": 50,
+      "initial_quota": 29,
+      "rounds": [
+        29.0,
+        31.0,
+        21.0,
+        29.0,
+        26.0,
+        23.0,
+        28.0,
+        27.0,
+        29.0,
+        24.0,
+        19.0,
+        28.0,
+        31.0,
+        30.0,
+        31.0,
+        29.0,
+        31.0,
+        21.0,
+        29.0,
+        26.0,
+        23.0,
+        28.0,
+        27.0,
+        29.0,
+        24.0,
+        19.0,
+        28.0,
+        31.0,
+        30.0,
+        31.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "200c41e8-90a6-48b7-ae81-3d8a18119250": {
+      "name": "kelly farr",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        23.0,
+        30.0,
+        22.0,
+        27.0,
+        21.0,
+        29.0,
+        21.0,
+        30.0,
+        30.0,
+        26.0,
+        29.0,
+        24.0,
+        23.0,
+        30.0,
+        22.0,
+        27.0,
+        21.0,
+        29.0,
+        21.0,
+        30.0,
+        30.0,
+        26.0,
+        29.0,
+        24.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "389216fe-6112-45e6-bb84-d259f038075d": {
+      "name": "kendal case",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        22.0,
+        19.0,
+        20.0,
+        27.0,
+        26.0,
+        28.0,
+        18.0,
+        22.0,
+        19.0,
+        22.0,
+        19.0,
+        20.0,
+        27.0,
+        26.0,
+        28.0,
+        18.0,
+        22.0,
+        19.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e3c59bdb-bd81-459b-8a5d-eba0d49ce203": {
+      "name": "kent everett",
+      "age": 50,
+      "initial_quota": 16,
+      "rounds": [
+        11.0,
+        10.0,
+        10.0,
+        11.0,
+        10.0,
+        10.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "03949d32-5836-4e39-a1b2-09549c1084e1": {
+      "name": "kevin bragg",
+      "age": 50,
+      "initial_quota": 29,
+      "rounds": [
+        20.0,
+        30.0,
+        29.0,
+        27.0,
+        30.0,
+        25.0,
+        22.0,
+        30.0,
+        30.0,
+        27.0,
+        30.0,
+        32.0,
+        20.0,
+        30.0,
+        29.0,
+        27.0,
+        30.0,
+        25.0,
+        22.0,
+        30.0,
+        30.0,
+        27.0,
+        30.0,
+        32.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a96b693c-f289-49cd-b2c0-eabaed07d5d0": {
+      "name": "kevin proffitt",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        29.0,
+        22.0,
+        24.0,
+        29.0,
+        22.0,
+        24.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3833e10a-ac73-49fd-9698-0cdb8113b37e": {
+      "name": "l cabbage",
+      "age": 50,
+      "initial_quota": 36,
+      "rounds": [
+        37.0,
+        32.0,
+        28.0,
+        37.0,
+        32.0,
+        28.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d08808e3-5587-4186-8153-d49dc0002f90": {
+      "name": "larry clark",
+      "age": 65,
+      "initial_quota": 25,
+      "rounds": [
+        27.0,
+        25.0,
+        25.0,
+        13.0,
+        25.0,
+        21.0,
+        24.0,
+        15.0,
+        25.0,
+        27.0,
+        25.0,
+        25.0,
+        13.0,
+        25.0,
+        21.0,
+        24.0,
+        15.0,
+        25.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "c639ec2a-f309-4a55-8fa5-8c4a5ff8035f": {
+      "name": "larry phillips",
+      "age": 65,
+      "initial_quota": 8,
+      "rounds": [
+        3.0,
+        3.0,
+        7.0,
+        2.0,
+        9.0,
+        10.0,
+        5.0,
+        12.0,
+        6.0,
+        2.0,
+        9.0,
+        8.0,
+        3.0,
+        3.0,
+        7.0,
+        2.0,
+        9.0,
+        10.0,
+        5.0,
+        12.0,
+        6.0,
+        2.0,
+        9.0,
+        8.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5b555718-e24a-4123-9d97-9ced1ccfd6f3": {
+      "name": "leslie cate",
+      "age": 65,
+      "initial_quota": 24,
+      "rounds": [
+        25.0,
+        26.0,
+        18.0,
+        22.0,
+        16.0,
+        19.0,
+        19.0,
+        20.0,
+        23.0,
+        32.0,
+        29.0,
+        23.0,
+        25.0,
+        26.0,
+        18.0,
+        22.0,
+        16.0,
+        19.0,
+        19.0,
+        20.0,
+        23.0,
+        32.0,
+        29.0,
+        23.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "78b586fc-3a8c-4038-912c-32a956bb31f2": {
+      "name": "m burnett",
+      "age": 65,
+      "initial_quota": 22,
+      "rounds": [
+        22.0,
+        18.0,
+        15.0,
+        22.0,
+        18.0,
+        15.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "876784c8-f4a4-481e-a4e0-8244c68a1268": {
+      "name": "mark lewis",
+      "age": 50,
+      "initial_quota": 35,
+      "rounds": [
+        33.0,
+        34.0,
+        29.0,
+        36.0,
+        33.0,
+        32.0,
+        33.0,
+        38.0,
+        35.0,
+        27.0,
+        35.0,
+        36.0,
+        33.0,
+        34.0,
+        29.0,
+        36.0,
+        33.0,
+        32.0,
+        33.0,
+        38.0,
+        35.0,
+        27.0,
+        35.0,
+        36.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "41baa471-f92a-4669-b16d-700dae4b28fa": {
+      "name": "mark mccord",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        28.0,
+        23.0,
+        27.0,
+        26.0,
+        30.0,
+        29.0,
+        27.0,
+        30.0,
+        35.0,
+        26.0,
+        32.0,
+        16.0,
+        28.0,
+        23.0,
+        27.0,
+        26.0,
+        30.0,
+        29.0,
+        27.0,
+        30.0,
+        35.0,
+        26.0,
+        32.0,
+        16.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "c8eba411-5e8f-4d26-95e8-8fadb64fde5e": {
+      "name": "matt ballard",
+      "age": 50,
+      "initial_quota": 26,
+      "rounds": [
+        30.0,
+        26.0,
+        23.0,
+        29.0,
+        30.0,
+        22.0,
+        27.0,
+        24.0,
+        25.0,
+        23.0,
+        20.0,
+        19.0,
+        30.0,
+        26.0,
+        23.0,
+        29.0,
+        30.0,
+        22.0,
+        27.0,
+        24.0,
+        25.0,
+        23.0,
+        20.0,
+        19.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "8ed34d15-048e-4141-bf41-6e8d6179149a": {
+      "name": "matthew giles",
+      "age": 50,
+      "initial_quota": 39,
+      "rounds": [
+        35.0,
+        39.0,
+        30.0,
+        40.0,
+        38.0,
+        40.0,
+        38.0,
+        37.0,
+        42.0,
+        35.0,
+        33.0,
+        36.0,
+        35.0,
+        39.0,
+        30.0,
+        40.0,
+        38.0,
+        40.0,
+        38.0,
+        37.0,
+        42.0,
+        35.0,
+        33.0,
+        36.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "520bfe59-81c7-4a04-a28f-cafa4bfe588e": {
+      "name": "michael bradshaw jr",
+      "age": 50,
+      "initial_quota": 41,
+      "rounds": [
+        43.0,
+        40.0,
+        45.0,
+        43.0,
+        40.0,
+        45.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "08ddceb2-06b5-4cf3-aaeb-d001e5702bcb": {
+      "name": "michael bradshaw sr",
+      "age": 65,
+      "initial_quota": 31,
+      "rounds": [
+        31.0,
+        25.0,
+        26.0,
+        30.0,
+        27.0,
+        34.0,
+        34.0,
+        28.0,
+        28.0,
+        25.0,
+        24.0,
+        26.0,
+        31.0,
+        25.0,
+        26.0,
+        30.0,
+        27.0,
+        34.0,
+        34.0,
+        28.0,
+        28.0,
+        25.0,
+        24.0,
+        26.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a57f484f-97e1-4dcd-af22-8cfaa77f3b68": {
+      "name": "mike cheek",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        30.0,
+        31.0,
+        26.0,
+        25.0,
+        29.0,
+        23.0,
+        21.0,
+        24.0,
+        26.0,
+        35.0,
+        22.0,
+        22.0,
+        30.0,
+        31.0,
+        26.0,
+        25.0,
+        29.0,
+        23.0,
+        21.0,
+        24.0,
+        26.0,
+        35.0,
+        22.0,
+        22.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "332a72b5-6247-474d-a264-32cdb6de928e": {
+      "name": "mike lewis",
+      "age": 65,
+      "initial_quota": 28,
+      "rounds": [
+        27.0,
+        25.0,
+        28.0,
+        21.0,
+        19.0,
+        25.0,
+        29.0,
+        30.0,
+        28.0,
+        27.0,
+        25.0,
+        28.0,
+        21.0,
+        19.0,
+        25.0,
+        29.0,
+        30.0,
+        28.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "34496074-d4d1-4259-b423-f487ecf54c85": {
+      "name": "mike mackay",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        28.0,
+        26.0,
+        21.0,
+        26.0,
+        28.0,
+        26.0,
+        34.0,
+        32.0,
+        29.0,
+        28.0,
+        26.0,
+        21.0,
+        26.0,
+        28.0,
+        26.0,
+        34.0,
+        32.0,
+        29.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d3a55071-2800-4b53-9111-b3d8d4e48bfe": {
+      "name": "mike stuart",
+      "age": 65,
+      "initial_quota": 24,
+      "rounds": [
+        16.0,
+        17.0,
+        21.0,
+        21.0,
+        15.0,
+        17.0,
+        23.0,
+        19.0,
+        19.0,
+        16.0,
+        17.0,
+        21.0,
+        21.0,
+        15.0,
+        17.0,
+        23.0,
+        19.0,
+        19.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e4f6bceb-5696-428e-b9d8-10dd0d4781cb": {
+      "name": "nick helle",
+      "age": 50,
+      "initial_quota": 38,
+      "rounds": [
+        35.0,
+        33.0,
+        32.0,
+        35.0,
+        33.0,
+        32.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "1966f0f3-2524-4045-b1c8-aeaf315ec266": {
+      "name": "neville howell",
+      "age": 65,
+      "initial_quota": 23,
+      "rounds": [
+        23.0,
+        21.0,
+        24.0,
+        15.0,
+        21.0,
+        21.0,
+        19.0,
+        21.0,
+        26.0,
+        24.0,
+        22.0,
+        23.0,
+        23.0,
+        21.0,
+        24.0,
+        15.0,
+        21.0,
+        21.0,
+        19.0,
+        21.0,
+        26.0,
+        24.0,
+        22.0,
+        23.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "faef7b1e-985b-4769-a15c-76ffdfd9d776": {
+      "name": "nick marrs",
+      "age": 50,
+      "initial_quota": 34,
+      "rounds": [
+        26.0,
+        25.0,
+        30.0,
+        19.0,
+        25.0,
+        25.0,
+        26.0,
+        25.0,
+        30.0,
+        19.0,
+        25.0,
+        25.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "407147aa-0a08-43b1-82bb-49e289907acd": {
+      "name": "or spangler",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        29.0,
+        32.0,
+        25.0,
+        29.0,
+        29.0,
+        25.0,
+        24.0,
+        27.0,
+        30.0,
+        24.0,
+        29.0,
+        27.0,
+        29.0,
+        32.0,
+        25.0,
+        29.0,
+        29.0,
+        25.0,
+        24.0,
+        27.0,
+        30.0,
+        24.0,
+        29.0,
+        27.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d3909736-1b67-4f12-a54b-9b4a839292af": {
+      "name": "p pickel",
+      "age": 65,
+      "initial_quota": 11,
+      "rounds": [
+        11.0,
+        6.0,
+        5.0,
+        11.0,
+        6.0,
+        5.0
+      ],
+      "consecutive_absences": 6,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f53aa1f7-bfd2-4122-b3ad-e5752f423d8c": {
+      "name": "paul hood",
+      "age": 50,
+      "initial_quota": 29,
+      "rounds": [
+        34.0,
+        25.0,
+        28.0,
+        25.0,
+        22.0,
+        23.0,
+        26.0,
+        30.0,
+        30.0,
+        34.0,
+        25.0,
+        28.0,
+        25.0,
+        22.0,
+        23.0,
+        26.0,
+        30.0,
+        30.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "847c980c-baf3-4609-a1ca-47755cc9fd3b": {
+      "name": "phil perkins",
+      "age": 65,
+      "initial_quota": 18,
+      "rounds": [
+        22.0,
+        25.0,
+        14.0,
+        17.0,
+        10.0,
+        14.0,
+        12.0,
+        26.0,
+        17.0,
+        9.0,
+        18.0,
+        0.0,
+        22.0,
+        25.0,
+        14.0,
+        17.0,
+        10.0,
+        14.0,
+        12.0,
+        26.0,
+        17.0,
+        9.0,
+        18.0,
+        0.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "f77cf193-fa61-40c7-9814-e2ee60032ece": {
+      "name": "r goddard",
+      "age": 65,
+      "initial_quota": 12,
+      "rounds": [
+        12.0,
+        5.0,
+        8.0,
+        8.0,
+        3.0,
+        3.0,
+        9.0,
+        19.0,
+        13.0,
+        12.0,
+        7.0,
+        11.0,
+        12.0,
+        5.0,
+        8.0,
+        8.0,
+        3.0,
+        3.0,
+        9.0,
+        19.0,
+        13.0,
+        12.0,
+        7.0,
+        11.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "ead33ff9-9d6b-44e7-b5f8-3ca511b91fc5": {
+      "name": "r montgomery",
+      "age": 65,
+      "initial_quota": 27,
+      "rounds": [
+        24.0,
+        28.0,
+        25.0,
+        28.0,
+        21.0,
+        27.0,
+        28.0,
+        24.0,
+        28.0,
+        24.0,
+        28.0,
+        25.0,
+        28.0,
+        21.0,
+        27.0,
+        28.0,
+        24.0,
+        28.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "09017a95-dad2-4538-9e0e-0595da6c6aac": {
+      "name": "r petrey",
+      "age": 50,
+      "initial_quota": 38,
+      "rounds": [
+        34.0,
+        31.0,
+        28.0,
+        31.0,
+        39.0,
+        32.0,
+        34.0,
+        31.0,
+        28.0,
+        31.0,
+        39.0,
+        32.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "d2268dfb-e34d-4882-bdf8-852504de1dba": {
+      "name": "randall honea",
+      "age": 50,
+      "initial_quota": 25,
+      "rounds": [
+        21.0,
+        27.0,
+        23.0,
+        22.0,
+        19.0,
+        25.0,
+        29.0,
+        22.0,
+        28.0,
+        27.0,
+        28.0,
+        27.0,
+        21.0,
+        27.0,
+        23.0,
+        22.0,
+        19.0,
+        25.0,
+        29.0,
+        22.0,
+        28.0,
+        27.0,
+        28.0,
+        27.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "3d5305c1-8715-4845-8676-f8feee4617d8": {
+      "name": "rhett lankford",
+      "age": 50,
+      "initial_quota": 22,
+      "rounds": [
+        21.0,
+        16.0,
+        14.0,
+        18.0,
+        16.0,
+        11.0,
+        22.0,
+        15.0,
+        19.0,
+        21.0,
+        16.0,
+        14.0,
+        18.0,
+        16.0,
+        11.0,
+        22.0,
+        15.0,
+        19.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "880659a0-70c3-466f-b921-1d69668dab78": {
+      "name": "richard ballard",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        15.0,
+        6.0,
+        9.0,
+        22.0,
+        12.0,
+        11.0,
+        20.0,
+        16.0,
+        17.0,
+        19.0,
+        17.0,
+        18.0,
+        15.0,
+        6.0,
+        9.0,
+        22.0,
+        12.0,
+        11.0,
+        20.0,
+        16.0,
+        17.0,
+        19.0,
+        17.0,
+        18.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "6c26fc7b-04df-401e-8dd7-75cc169f5b52": {
+      "name": "richard burchfield",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        23.0,
+        22.0,
+        21.0,
+        30.0,
+        21.0,
+        21.0,
+        23.0,
+        23.0,
+        23.0,
+        30.0,
+        17.0,
+        26.0,
+        23.0,
+        22.0,
+        21.0,
+        30.0,
+        21.0,
+        21.0,
+        23.0,
+        23.0,
+        23.0,
+        30.0,
+        17.0,
+        26.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "16fe01c0-5616-46db-9402-566ba56b7332": {
+      "name": "rickie bristol",
+      "age": 65,
+      "initial_quota": 19,
+      "rounds": [
+        22.0,
+        22.0,
+        20.0,
+        9.0,
+        15.0,
+        15.0,
+        12.0,
+        11.0,
+        20.0,
+        12.0,
+        10.0,
+        14.0,
+        22.0,
+        22.0,
+        20.0,
+        9.0,
+        15.0,
+        15.0,
+        12.0,
+        11.0,
+        20.0,
+        12.0,
+        10.0,
+        14.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "8647f64c-4808-4949-ac40-4fea861575a4": {
+      "name": "ricky ford",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        26.0,
+        23.0,
+        22.0,
+        21.0,
+        18.0,
+        23.0,
+        21.0,
+        21.0,
+        22.0,
+        17.0,
+        24.0,
+        16.0,
+        26.0,
+        23.0,
+        22.0,
+        21.0,
+        18.0,
+        23.0,
+        21.0,
+        21.0,
+        22.0,
+        17.0,
+        24.0,
+        16.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": {
+      "name": "ricky oakes",
+      "age": 65,
+      "initial_quota": 22,
+      "rounds": [
+        21.0,
+        16.0,
+        23.0,
+        23.0,
+        17.0,
+        23.0,
+        23.0,
+        21.0,
+        21.0,
+        22.0,
+        19.0,
+        23.0,
+        25.0,
+        21.0,
+        26.0,
+        21.0,
+        16.0,
+        23.0,
+        23.0,
+        17.0,
+        23.0,
+        23.0,
+        21.0,
+        21.0,
+        22.0,
+        19.0,
+        23.0,
+        25.0,
+        21.0,
+        26.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "a5b090d5-c00b-4664-a568-5b2b004397dd": {
+      "name": "robert scroggins",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        27.0,
+        21.0,
+        22.0,
+        15.0,
+        15.0,
+        25.0,
+        31.0,
+        27.0,
+        28.0,
+        23.0,
+        22.0,
+        20.0,
+        27.0,
+        21.0,
+        22.0,
+        15.0,
+        15.0,
+        25.0,
+        31.0,
+        27.0,
+        28.0,
+        23.0,
+        22.0,
+        20.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e4162652-e7c6-4c07-a028-02b50fbf235c": {
+      "name": "roger robinson",
+      "age": 50,
+      "initial_quota": 14,
+      "rounds": [
+        12.0,
+        11.0,
+        10.0,
+        12.0,
+        11.0,
+        10.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "22a96b3b-f6e2-4b17-b2c1-2e9f12e3f8be": {
+      "name": "ron parsons",
+      "age": 65,
+      "initial_quota": 28,
+      "rounds": [
+        24.0,
+        31.0,
+        21.0,
+        25.0,
+        25.0,
+        29.0,
+        31.0,
+        22.0,
+        20.0,
+        24.0,
+        31.0,
+        21.0,
+        25.0,
+        25.0,
+        29.0,
+        31.0,
+        22.0,
+        20.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "6fd44c64-a32d-4ab8-9c54-99c258c67f27": {
+      "name": "ronny kinkaid",
+      "age": 50,
+      "initial_quota": 21,
+      "rounds": [],
+      "consecutive_absences": 8,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "b8d707f8-faf5-4278-b2c2-b1ce97757747": {
+      "name": "Ryand Johnson",
+      "age": 50,
+      "initial_quota": 17,
+      "rounds": [
+        15.0,
+        13.0,
+        22.0,
+        20.0,
+        13.0,
+        13.0,
+        18.0,
+        14.0,
+        12.0,
+        20.0,
+        14.0,
+        23.0,
+        26.0,
+        23.0,
+        24.0,
+        15.0,
+        13.0,
+        22.0,
+        20.0,
+        13.0,
+        13.0,
+        18.0,
+        14.0,
+        12.0,
+        20.0,
+        14.0,
+        23.0,
+        26.0,
+        23.0,
+        24.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "009fdab4-1c7f-4ceb-85a0-5e270a30580b": {
+      "name": "s wiggins",
+      "age": 50,
+      "initial_quota": 16,
+      "rounds": [
+        11.0,
+        11.0,
+        15.0,
+        11.0,
+        11.0,
+        15.0
+      ],
+      "consecutive_absences": 7,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "4f5e2966-b0ae-495f-a784-baa80e0ed889": {
+      "name": "sam love",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        21.0,
+        24.0,
+        26.0,
+        15.0,
+        15.0,
+        10.0,
+        20.0,
+        24.0,
+        13.0,
+        14.0,
+        12.0,
+        12.0,
+        19.0,
+        15.0,
+        18.0,
+        21.0,
+        24.0,
+        26.0,
+        15.0,
+        15.0,
+        10.0,
+        20.0,
+        24.0,
+        13.0,
+        14.0,
+        12.0,
+        12.0,
+        19.0,
+        15.0,
+        18.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "0d79c423-2315-4568-9a65-b4b430e18200": {
+      "name": "scott stuart",
+      "age": 50,
+      "initial_quota": 27,
+      "rounds": [
+        25.0,
+        20.0,
+        16.0,
+        21.0,
+        11.0,
+        19.0,
+        31.0,
+        20.0,
+        20.0,
+        25.0,
+        20.0,
+        16.0,
+        21.0,
+        11.0,
+        19.0,
+        31.0,
+        20.0,
+        20.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "b890b262-f41d-4a53-9fdd-5cd430ec1d51": {
+      "name": "shawn floyd",
+      "age": 50,
+      "initial_quota": 25,
+      "rounds": [
+        21.0,
+        24.0,
+        24.0,
+        19.0,
+        25.0,
+        24.0,
+        28.0,
+        21.0,
+        23.0,
+        27.0,
+        27.0,
+        24.0,
+        21.0,
+        24.0,
+        24.0,
+        19.0,
+        25.0,
+        24.0,
+        28.0,
+        21.0,
+        23.0,
+        27.0,
+        27.0,
+        24.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "fc6ac298-4741-4961-ae13-c31dd1515f0f": {
+      "name": "steve stilts",
+      "age": 65,
+      "initial_quota": 13,
+      "rounds": [
+        12.0,
+        8.0,
+        12.0,
+        13.0,
+        12.0,
+        17.0,
+        9.0,
+        8.0,
+        10.0,
+        12.0,
+        8.0,
+        12.0,
+        13.0,
+        12.0,
+        17.0,
+        9.0,
+        8.0,
+        10.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "35539496-5f8d-42a7-8661-41d9d3451b3f": {
+      "name": "t gardner",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        30.0,
+        35.0,
+        30.0,
+        30.0,
+        35.0,
+        30.0
+      ],
+      "consecutive_absences": 6,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5d4d2e03-3844-404d-9013-c692fb7e1b93": {
+      "name": "terry bragg",
+      "age": 65,
+      "initial_quota": 15,
+      "rounds": [
+        14.0,
+        12.0,
+        16.0,
+        8.0,
+        9.0,
+        7.0,
+        17.0,
+        12.0,
+        13.0,
+        13.0,
+        13.0,
+        5.0,
+        10.0,
+        11.0,
+        12.0,
+        14.0,
+        12.0,
+        16.0,
+        8.0,
+        9.0,
+        7.0,
+        17.0,
+        12.0,
+        13.0,
+        13.0,
+        13.0,
+        5.0,
+        10.0,
+        11.0,
+        12.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "ab13d155-6aa3-4228-930f-ed86d32669ba": {
+      "name": "terry tuttle",
+      "age": 50,
+      "initial_quota": 23,
+      "rounds": [
+        16.0,
+        20.0,
+        25.0,
+        22.0,
+        18.0,
+        24.0,
+        23.0,
+        16.0,
+        19.0,
+        16.0,
+        20.0,
+        25.0,
+        22.0,
+        18.0,
+        24.0,
+        23.0,
+        16.0,
+        19.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "6aae5db9-d50e-4fbe-814a-8d5a3c9f1b51": {
+      "name": "todd pugh",
+      "age": 50,
+      "initial_quota": 24,
+      "rounds": [
+        19.0,
+        16.0,
+        29.0,
+        26.0,
+        24.0,
+        17.0,
+        14.0,
+        24.0,
+        19.0,
+        19.0,
+        16.0,
+        29.0,
+        26.0,
+        24.0,
+        17.0,
+        14.0,
+        24.0,
+        19.0
+      ],
+      "consecutive_absences": 5,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "228dc074-88b5-4bf6-a652-9747cd9da0e1": {
+      "name": "Tom Graumann",
+      "age": 50,
+      "initial_quota": 12,
+      "rounds": [
+        9.0,
+        7.0,
+        9.0,
+        13.0,
+        11.0,
+        6.0,
+        10.0,
+        10.0,
+        16.0,
+        11.0,
+        14.0,
+        13.0,
+        9.0,
+        7.0,
+        9.0,
+        13.0,
+        11.0,
+        6.0,
+        10.0,
+        10.0,
+        16.0,
+        11.0,
+        14.0,
+        13.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e788adb2-2af6-4e49-86a2-bc698e3f292c": {
+      "name": "tom richards",
+      "age": 50,
+      "initial_quota": 19,
+      "rounds": [
+        17.0,
+        13.0,
+        12.0,
+        15.0,
+        14.0,
+        20.0,
+        17.0,
+        13.0,
+        12.0,
+        15.0,
+        14.0,
+        20.0
+      ],
+      "consecutive_absences": 3,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "79620fb1-1c1a-4982-a185-b9a240a1f4a7": {
+      "name": "tony hughes",
+      "age": 50,
+      "initial_quota": 31,
+      "rounds": [
+        28.0,
+        32.0,
+        33.0,
+        22.0,
+        29.0,
+        31.0,
+        28.0,
+        32.0,
+        33.0,
+        22.0,
+        29.0,
+        31.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "41708f04-df13-4be4-9b86-12864a50e6bb": {
+      "name": "tony roberts",
+      "age": 65,
+      "initial_quota": 26,
+      "rounds": [
+        29.0,
+        28.0,
+        23.0,
+        19.0,
+        28.0,
+        14.0,
+        22.0,
+        26.0,
+        23.0,
+        29.0,
+        28.0,
+        23.0,
+        19.0,
+        28.0,
+        14.0,
+        22.0,
+        26.0,
+        23.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": {
+      "name": "travis jacques",
+      "age": 50,
+      "initial_quota": 9,
+      "rounds": [
+        7.0,
+        9.0,
+        10.0,
+        3.0,
+        5.0,
+        4.0,
+        12.0,
+        14.0,
+        11.0,
+        5.0,
+        3.0,
+        2.0,
+        10.0,
+        12.0,
+        8.0,
+        7.0,
+        9.0,
+        10.0,
+        3.0,
+        5.0,
+        4.0,
+        12.0,
+        14.0,
+        11.0,
+        5.0,
+        3.0,
+        2.0,
+        10.0,
+        12.0,
+        8.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "0e428fca-4f2a-4157-845f-4b9ba8f78f60": {
+      "name": "travis reeves",
+      "age": 50,
+      "initial_quota": 32,
+      "rounds": [
+        20.0,
+        20.0,
+        16.0,
+        20.0,
+        20.0,
+        16.0
+      ],
+      "consecutive_absences": 4,
+      "flagged_for_evaluation": true,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "4d3921ae-0952-4c5b-9614-440177ee8351": {
+      "name": "trey mcnear",
+      "age": 50,
+      "initial_quota": 32,
+      "rounds": [
+        30.0,
+        29.0,
+        33.0,
+        31.0,
+        32.0,
+        31.0,
+        22.0,
+        32.0,
+        29.0,
+        35.0,
+        24.0,
+        36.0,
+        30.0,
+        29.0,
+        33.0,
+        31.0,
+        32.0,
+        31.0,
+        22.0,
+        32.0,
+        29.0,
+        35.0,
+        24.0,
+        36.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "6b52db86-ef56-4ef1-b558-620fb0d32d25": {
+      "name": "tyler spence",
+      "age": 50,
+      "initial_quota": 30,
+      "rounds": [
+        29.0,
+        29.0,
+        26.0,
+        26.0,
+        30.0,
+        32.0,
+        34.0,
+        34.0,
+        34.0,
+        29.0,
+        29.0,
+        26.0,
+        26.0,
+        30.0,
+        32.0,
+        34.0,
+        34.0,
+        34.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e650e8dc-b0ac-4228-9d31-930396e58b6e": {
+      "name": "w jordan",
+      "age": 50,
+      "initial_quota": 10,
+      "rounds": [
+        1.0,
+        5.0,
+        3.0,
+        1.0,
+        5.0,
+        3.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "e882b635-22ab-4890-8083-cbffe0449e1a": {
+      "name": "wayne moore",
+      "age": 65,
+      "initial_quota": 29,
+      "rounds": [
+        28.0,
+        26.0,
+        28.0,
+        32.0,
+        19.0,
+        23.0,
+        31.0,
+        29.0,
+        24.0,
+        28.0,
+        26.0,
+        28.0,
+        32.0,
+        19.0,
+        23.0,
+        31.0,
+        29.0,
+        24.0
+      ],
+      "consecutive_absences": 2,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "7ae5f963-8d13-4568-8335-3880bdddd6c3": {
+      "name": "wayne oglesby",
+      "age": 65,
+      "initial_quota": 10,
+      "rounds": [
+        9.0,
+        6.0,
+        10.0,
+        8.0,
+        10.0,
+        9.0,
+        10.0,
+        10.0,
+        11.0,
+        7.0,
+        5.0,
+        14.0,
+        9.0,
+        6.0,
+        10.0,
+        8.0,
+        10.0,
+        9.0,
+        10.0,
+        10.0,
+        11.0,
+        7.0,
+        5.0,
+        14.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "4a17c0ce-02c6-449e-9e61-1ab299e64bd5": {
+      "name": "wayne pearson",
+      "age": 50,
+      "initial_quota": 18,
+      "rounds": [
+        17.0,
+        14.0,
+        18.0,
+        16.0,
+        16.0,
+        11.0,
+        19.0,
+        18.0,
+        17.0,
+        14.0,
+        8.0,
+        6.0,
+        17.0,
+        14.0,
+        18.0,
+        16.0,
+        16.0,
+        11.0,
+        19.0,
+        18.0,
+        17.0,
+        14.0,
+        8.0,
+        6.0
+      ],
+      "consecutive_absences": 1,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    },
+    "5de006e4-4c09-4660-8440-3c5799a39608": {
+      "name": "Ronnie Kincaid",
+      "age": 65,
+      "initial_quota": 20,
+      "rounds": [
+        8.0,
+        8.0,
+        7.0,
+        8.0,
+        8.0,
+        7.0
+      ],
+      "consecutive_absences": 0,
+      "flagged_for_evaluation": false,
+      "temp_bonus": 0,
+      "date_added": "2025-08-14 19:44:05"
+    }
+  },
+  "tournaments": {
+    "d3441d1b-22e2-4a54-ba05-b7258de18fa7": {
+      "name": "Fall 2021",
+      "date": "2021-04-16",
+      "date_created": "2025-08-14 19:46:00",
+      "results": {
+        "d2268dfb-e34d-4882-bdf8-852504de1dba": [
+          21.0,
+          27.0,
+          23.0
+        ],
+        "94179179-2007-48fb-bc7f-d1c8c78683f1": [
+          22.0,
+          24.0,
+          27.0
+        ],
+        "510b9339-48d6-45b5-b19c-e72ec41495d2": [
+          25.0,
+          21.0,
+          22.0
+        ],
+        "ab13d155-6aa3-4228-930f-ed86d32669ba": [
+          16.0,
+          20.0,
+          25.0
+        ],
+        "9c059f7b-40d5-4fe6-8196-a5b4184d561d": [
+          18.0,
+          19.0,
+          17.0
+        ],
+        "3afd9daa-6b8e-4769-8b2d-339054e9e486": [
+          28.0,
+          36.0,
+          30.0
+        ],
+        "f82226c0-44af-4219-a31b-b2f62fc9a111": [
+          28.0,
+          27.0,
+          29.0
+        ],
+        "179b7e80-822a-4f2b-849b-e3e2ff792e4e": [
+          26.0,
+          16.0,
+          18.0
+        ],
+        "5ede6f01-eab9-4d12-9dc0-41b135be6bc4": [
+          23.0,
+          30.0,
+          21.0
+        ],
+        "6c26fc7b-04df-401e-8dd7-75cc169f5b52": [
+          23.0,
+          22.0,
+          21.0
+        ],
+        "98e3cdfa-4422-49c3-b6b1-4d04a6616872": [
+          34.0,
+          28.0,
+          27.0
+        ],
+        "34496074-d4d1-4259-b423-f487ecf54c85": [
+          28.0,
+          26.0,
+          21.0
+        ],
+        "ead33ff9-9d6b-44e7-b5f8-3ca511b91fc5": [
+          24.0,
+          28.0,
+          25.0
+        ],
+        "7c26243f-8c75-4009-bddd-44fe706f1f5a": [
+          25.0,
+          27.0,
+          23.0
+        ],
+        "09017a95-dad2-4538-9e0e-0595da6c6aac": [
+          34.0,
+          31.0,
+          28.0
+        ],
+        "3e268adc-ee81-49cd-bc40-b741752be971": [
+          21.0,
+          23.0,
+          21.0
+        ],
+        "1066d1af-e51f-4f36-b990-6d966bc670ba": [
+          22.0,
+          15.0,
+          15.0
+        ],
+        "41708f04-df13-4be4-9b86-12864a50e6bb": [
+          29.0,
+          28.0,
+          23.0
+        ],
+        "09b3e672-95a4-409d-ad24-82a05243aca5": [
+          19.0,
+          16.0,
+          13.0
+        ],
+        "6aae5db9-d50e-4fbe-814a-8d5a3c9f1b51": [
+          19.0,
+          16.0,
+          29.0
+        ],
+        "22a96b3b-f6e2-4b17-b2c1-2e9f12e3f8be": [
+          24.0,
+          31.0,
+          21.0
+        ],
+        "0215b7d9-9dd0-45e9-9749-8bd55dacdf26": [
+          16.0,
+          8.0,
+          14.0
+        ],
+        "41e30d7e-2453-46b1-a4b8-7b74d5149665": [
+          10.0,
+          11.0,
+          17.0
+        ],
+        "ec0c8421-2ed1-4f66-9919-768a60b41f5d": [
+          28.0,
+          22.0,
+          29.0
+        ],
+        "b890b262-f41d-4a53-9fdd-5cd430ec1d51": [
+          21.0,
+          24.0,
+          24.0
+        ],
+        "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": [
+          7.0,
+          9.0,
+          10.0
+        ],
+        "6936c05f-7903-460c-816c-27cd3b9385a4": [
+          16.0,
+          16.0,
+          22.0
+        ],
+        "75fc62a9-7d80-4493-bb66-17a145a6919c": [
+          14.0,
+          13.0,
+          19.0
+        ],
+        "009fdab4-1c7f-4ceb-85a0-5e270a30580b": [
+          11.0,
+          11.0,
+          15.0
+        ],
+        "f53aa1f7-bfd2-4122-b3ad-e5752f423d8c": [
+          34.0,
+          25.0,
+          28.0
+        ]
+      }
+    },
+    "36e118d8-3873-499a-8539-29decaf79b41": {
+      "name": "Spring 2022",
+      "date": "2022-04-22",
+      "date_created": "2025-08-14 19:46:51",
+      "results": {
+        "49861073-9623-4781-adc2-72659abe2996": [
+          9.0,
+          15.0,
+          20.0
+        ],
+        "41e30d7e-2453-46b1-a4b8-7b74d5149665": [
+          9.0,
+          11.0,
+          7.0
+        ],
+        "d3909736-1b67-4f12-a54b-9b4a839292af": [
+          11.0,
+          6.0,
+          5.0
+        ],
+        "0215b7d9-9dd0-45e9-9749-8bd55dacdf26": [
+          12.0,
+          19.0,
+          19.0
+        ],
+        "9c059f7b-40d5-4fe6-8196-a5b4184d561d": [
+          13.0,
+          16.0,
+          16.0
+        ],
+        "75fc62a9-7d80-4493-bb66-17a145a6919c": [
+          13.0,
+          20.0,
+          16.0
+        ],
+        "5ede6f01-eab9-4d12-9dc0-41b135be6bc4": [
+          14.0,
+          18.0,
+          20.0
+        ],
+        "94179179-2007-48fb-bc7f-d1c8c78683f1": [
+          15.0,
+          18.0,
+          24.0
+        ],
+        "32aca080-4817-44dd-bd3a-b4ba4d87e0a4": [
+          15.0,
+          19.0,
+          26.0
+        ],
+        "e788adb2-2af6-4e49-86a2-bc698e3f292c": [
+          17.0,
+          13.0,
+          12.0
+        ],
+        "41708f04-df13-4be4-9b86-12864a50e6bb": [
+          19.0,
+          28.0,
+          14.0
+        ],
+        "179b7e80-822a-4f2b-849b-e3e2ff792e4e": [
+          19.0,
+          17.0,
+          16.0
+        ],
+        "af46d924-ecc3-40a3-b346-45bdd92e7058": [
+          20.0,
+          18.0,
+          23.0
+        ],
+        "f82226c0-44af-4219-a31b-b2f62fc9a111": [
+          21.0,
+          18.0,
+          16.0
+        ],
+        "d2268dfb-e34d-4882-bdf8-852504de1dba": [
+          22.0,
+          19.0,
+          25.0
+        ],
+        "847c980c-baf3-4609-a1ca-47755cc9fd3b": [
+          22.0,
+          25.0,
+          14.0
+        ],
+        "22a96b3b-f6e2-4b17-b2c1-2e9f12e3f8be": [
+          25.0,
+          25.0,
+          29.0
+        ],
+        "8647f64c-4808-4949-ac40-4fea861575a4": [
+          26.0,
+          23.0,
+          22.0
+        ],
+        "510b9339-48d6-45b5-b19c-e72ec41495d2": [
+          26.0,
+          30.0,
+          24.0
+        ],
+        "34496074-d4d1-4259-b423-f487ecf54c85": [
+          26.0,
+          28.0,
+          26.0
+        ],
+        "ec0c8421-2ed1-4f66-9919-768a60b41f5d": [
+          26.0,
+          27.0,
+          16.0
+        ],
+        "6aae5db9-d50e-4fbe-814a-8d5a3c9f1b51": [
+          26.0,
+          24.0,
+          17.0
+        ],
+        "18e3096b-7f87-4429-ac38-c30e7636fd33": [
+          27.0,
+          31.0,
+          32.0
+        ],
+        "f7a73b88-a3a6-4f15-b294-5552265724f0": [
+          27.0,
+          22.0,
+          22.0
+        ],
+        "d08808e3-5587-4186-8153-d49dc0002f90": [
+          27.0,
+          25.0,
+          25.0
+        ],
+        "332a72b5-6247-474d-a264-32cdb6de928e": [
+          27.0,
+          25.0,
+          28.0
+        ],
+        "2168fb73-464d-4a6c-b009-d605a9c1fd15": [
+          28.0,
+          27.0,
+          22.0
+        ],
+        "e882b635-22ab-4890-8083-cbffe0449e1a": [
+          28.0,
+          26.0,
+          28.0
+        ],
+        "09b3e672-95a4-409d-ad24-82a05243aca5": [
+          28.0,
+          27.0,
+          31.0
+        ],
+        "79620fb1-1c1a-4982-a185-b9a240a1f4a7": [
+          28.0,
+          32.0,
+          33.0
+        ],
+        "ead33ff9-9d6b-44e7-b5f8-3ca511b91fc5": [
+          28.0,
+          21.0,
+          27.0
+        ],
+        "3afd9daa-6b8e-4769-8b2d-339054e9e486": [
+          28.0,
+          34.0,
+          27.0
+        ],
+        "e3ba7e15-d93d-4a0a-bfb8-2f1577cca23b": [
+          29.0,
+          21.0,
+          28.0
+        ],
+        "7c26243f-8c75-4009-bddd-44fe706f1f5a": [
+          30.0,
+          34.0,
+          35.0
+        ],
+        "6c26fc7b-04df-401e-8dd7-75cc169f5b52": [
+          30.0,
+          21.0,
+          21.0
+        ],
+        "35539496-5f8d-42a7-8661-41d9d3451b3f": [
+          30.0,
+          35.0,
+          30.0
+        ],
+        "08ddceb2-06b5-4cf3-aaeb-d001e5702bcb": [
+          31.0,
+          25.0,
+          26.0
+        ]
+      }
+    },
+    "fdf58b40-b812-4c5f-82d1-a5d927890e8b": {
+      "name": "Fall 2022",
+      "date": "2022-08-19",
+      "date_created": "2025-08-14 19:47:28",
+      "results": {
+        "c639ec2a-f309-4a55-8fa5-8c4a5ff8035f": [
+          3.0,
+          3.0,
+          7.0
+        ],
+        "0215b7d9-9dd0-45e9-9749-8bd55dacdf26": [
+          8.0,
+          7.0,
+          17.0
+        ],
+        "7ae5f963-8d13-4568-8335-3880bdddd6c3": [
+          9.0,
+          6.0,
+          10.0
+        ],
+        "928af2c1-bbf1-4cba-a00e-112e0b7ba551": [
+          12.0,
+          17.0,
+          10.0
+        ],
+        "2466af3d-ffc8-4f18-bf34-6126ee5bed02": [
+          12.0,
+          23.0,
+          16.0
+        ],
+        "d08808e3-5587-4186-8153-d49dc0002f90": [
+          13.0,
+          25.0,
+          21.0
+        ],
+        "6aae5db9-d50e-4fbe-814a-8d5a3c9f1b51": [
+          14.0,
+          24.0,
+          19.0
+        ],
+        "b2c17968-2247-4cfd-a08f-4804d435cab1": [
+          15.0,
+          11.0,
+          15.0
+        ],
+        "510b9339-48d6-45b5-b19c-e72ec41495d2": [
+          16.0,
+          17.0,
+          15.0
+        ],
+        "7f06cd53-fe7f-432b-8b41-da8424594782": [
+          16.0,
+          18.0,
+          12.0
+        ],
+        "4a17c0ce-02c6-449e-9e61-1ab299e64bd5": [
+          17.0,
+          14.0,
+          18.0
+        ],
+        "f82226c0-44af-4219-a31b-b2f62fc9a111": [
+          17.0,
+          25.0,
+          23.0
+        ],
+        "c52aabf7-b599-4cad-be72-9ddc1ee8cc7f": [
+          18.0,
+          24.0,
+          12.0
+        ],
+        "2168fb73-464d-4a6c-b009-d605a9c1fd15": [
+          19.0,
+          23.0,
+          22.0
+        ],
+        "b1070744-3027-4aca-9aa0-0d4cc8d275e8": [
+          19.0,
+          11.0,
+          19.0
+        ],
+        "ec9f330c-8391-4039-9b77-aabaf7250145": [
+          19.0,
+          12.0,
+          7.0
+        ],
+        "09b3e672-95a4-409d-ad24-82a05243aca5": [
+          20.0,
+          21.0,
+          26.0
+        ],
+        "3d5305c1-8715-4845-8676-f8feee4617d8": [
+          21.0,
+          16.0,
+          14.0
+        ],
+        "332a72b5-6247-474d-a264-32cdb6de928e": [
+          21.0,
+          19.0,
+          25.0
+        ],
+        "78b586fc-3a8c-4038-912c-32a956bb31f2": [
+          22.0,
+          18.0,
+          15.0
+        ],
+        "389216fe-6112-45e6-bb84-d259f038075d": [
+          22.0,
+          19.0,
+          20.0
+        ],
+        "200c41e8-90a6-48b7-ae81-3d8a18119250": [
+          23.0,
+          30.0,
+          22.0
+        ],
+        "1966f0f3-2524-4045-b1c8-aeaf315ec266": [
+          23.0,
+          21.0,
+          24.0
+        ],
+        "179b7e80-822a-4f2b-849b-e3e2ff792e4e": [
+          25.0,
+          17.0,
+          15.0
+        ],
+        "5ede6f01-eab9-4d12-9dc0-41b135be6bc4": [
+          25.0,
+          18.0,
+          20.0
+        ],
+        "27666889-80b5-4977-b95b-a120f275a95a": [
+          26.0,
+          15.0,
+          20.0
+        ],
+        "38becf4f-9188-4e3c-9592-85459d5820be": [
+          26.0,
+          23.0,
+          19.0
+        ],
+        "47e854de-50d4-49cc-9255-8724f246b033": [
+          27.0,
+          25.0,
+          25.0
+        ],
+        "3afd9daa-6b8e-4769-8b2d-339054e9e486": [
+          27.0,
+          30.0,
+          24.0
+        ],
+        "ead33ff9-9d6b-44e7-b5f8-3ca511b91fc5": [
+          28.0,
+          24.0,
+          28.0
+        ],
+        "407147aa-0a08-43b1-82bb-49e289907acd": [
+          29.0,
+          32.0,
+          25.0
+        ],
+        "5f33803c-0aba-433f-8f49-da6fbc238d02": [
+          29.0,
+          37.0,
+          30.0
+        ],
+        "a96b693c-f289-49cd-b2c0-eabaed07d5d0": [
+          29.0,
+          22.0,
+          24.0
+        ],
+        "c8eba411-5e8f-4d26-95e8-8fadb64fde5e": [
+          30.0,
+          26.0,
+          23.0
+        ],
+        "c660a300-0b83-4c50-aec9-2979633183f7": [
+          30.0,
+          26.0,
+          16.0
+        ],
+        "534c8dbb-595f-414d-9d1a-8012092a3dba": [
+          30.0,
+          26.0,
+          0.0
+        ],
+        "22a96b3b-f6e2-4b17-b2c1-2e9f12e3f8be": [
+          31.0,
+          22.0,
+          20.0
+        ],
+        "208e03bb-767c-4a7c-8267-ea13b8513729": [
+          32.0,
+          18.0,
+          23.0
+        ],
+        "f7a73b88-a3a6-4f15-b294-5552265724f0": [
+          33.0,
+          31.0,
+          30.0
+        ],
+        "94179179-2007-48fb-bc7f-d1c8c78683f1": [
+          34.0,
+          25.0,
+          25.0
+        ],
+        "34496074-d4d1-4259-b423-f487ecf54c85": [
+          34.0,
+          32.0,
+          29.0
+        ],
+        "3833e10a-ac73-49fd-9698-0cdb8113b37e": [
+          37.0,
+          32.0,
+          28.0
+        ],
+        "520bfe59-81c7-4a04-a28f-cafa4bfe588e": [
+          43.0,
+          40.0,
+          45.0
+        ]
+      }
+    },
+    "7c8df93a-e7ad-4fbf-94e4-6c083ef3a621": {
+      "name": "Spring 2023",
+      "date": "2023-04-14",
+      "date_created": "2025-08-14 19:48:18",
+      "results": {
+        "8ca3a584-e501-461e-b73c-7d7f80204987": [
+          0.0,
+          8.0,
+          9.0
+        ],
+        "397f524a-ecf6-44c8-abc0-c86ccec4705b": [
+          1.0,
+          8.0,
+          9.0
+        ],
+        "32c12c58-59be-4ebe-bc6f-210aa59489be": [
+          8.0,
+          10.0,
+          11.0
+        ],
+        "32aca080-4817-44dd-bd3a-b4ba4d87e0a4": [
+          8.0,
+          17.0,
+          12.0
+        ],
+        "228dc074-88b5-4bf6-a652-9747cd9da0e1": [
+          9.0,
+          7.0,
+          9.0
+        ],
+        "f77cf193-fa61-40c7-9814-e2ee60032ece": [
+          12.0,
+          5.0,
+          8.0
+        ],
+        "2e007091-36b1-402e-967e-30a7e701dbf8": [
+          12.0,
+          12.0,
+          12.0
+        ],
+        "ec9f330c-8391-4039-9b77-aabaf7250145": [
+          13.0,
+          11.0,
+          15.0
+        ],
+        "5d4d2e03-3844-404d-9013-c692fb7e1b93": [
+          14.0,
+          12.0,
+          16.0
+        ],
+        "880659a0-70c3-466f-b921-1d69668dab78": [
+          15.0,
+          6.0,
+          9.0
+        ],
+        "af46d924-ecc3-40a3-b346-45bdd92e7058": [
+          15.0,
+          14.0,
+          17.0
+        ],
+        "244a2ff0-9962-431d-988e-e5067606abe2": [
+          15.0,
+          16.0,
+          13.0
+        ],
+        "b8d707f8-faf5-4278-b2c2-b1ce97757747": [
+          15.0,
+          13.0,
+          22.0
+        ],
+        "a43e6cec-4ad6-4d9f-9cce-614e18306833": [
+          15.0,
+          25.0,
+          18.0
+        ],
+        "4a17c0ce-02c6-449e-9e61-1ab299e64bd5": [
+          16.0,
+          16.0,
+          11.0
+        ],
+        "53d0d435-2c5b-4a94-ac34-62cc2efd1eaf": [
+          18.0,
+          23.0,
+          19.0
+        ],
+        "b2c17968-2247-4cfd-a08f-4804d435cab1": [
+          20.0,
+          11.0,
+          14.0
+        ],
+        "0e428fca-4f2a-4157-845f-4b9ba8f78f60": [
+          20.0,
+          20.0,
+          16.0
+        ],
+        "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": [
+          21.0,
+          25.0,
+          29.0
+        ],
+        "8647f64c-4808-4949-ac40-4fea861575a4": [
+          21.0,
+          18.0,
+          23.0
+        ],
+        "4f5e2966-b0ae-495f-a784-baa80e0ed889": [
+          21.0,
+          24.0,
+          26.0
+        ],
+        "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": [
+          21.0,
+          16.0,
+          23.0
+        ],
+        "f2e86063-04d1-43b8-a41f-7fb1b001010b": [
+          21.0,
+          12.0,
+          26.0
+        ],
+        "16fe01c0-5616-46db-9402-566ba56b7332": [
+          22.0,
+          22.0,
+          20.0
+        ],
+        "ab13d155-6aa3-4228-930f-ed86d32669ba": [
+          22.0,
+          18.0,
+          24.0
+        ],
+        "f7a73b88-a3a6-4f15-b294-5552265724f0": [
+          22.0,
+          21.0,
+          19.0
+        ],
+        "79620fb1-1c1a-4982-a185-b9a240a1f4a7": [
+          22.0,
+          29.0,
+          31.0
+        ],
+        "a1131332-bd32-453a-881b-3f71f3389c3b": [
+          23.0,
+          20.0,
+          22.0
+        ],
+        "256ec882-362b-4d4d-bf6a-458c3a07b347": [
+          23.0,
+          16.0,
+          20.0
+        ],
+        "56d58182-5a4f-4f54-89f6-ae9298a56266": [
+          23.0,
+          19.0,
+          20.0
+        ],
+        "e9d43728-c9cd-447b-aefb-858b595756b9": [
+          23.0,
+          22.0,
+          22.0
+        ],
+        "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": [
+          24.0,
+          32.0,
+          22.0
+        ],
+        "d08808e3-5587-4186-8153-d49dc0002f90": [
+          24.0,
+          15.0,
+          25.0
+        ],
+        "7f06cd53-fe7f-432b-8b41-da8424594782": [
+          24.0,
+          19.0,
+          15.0
+        ],
+        "f53aa1f7-bfd2-4122-b3ad-e5752f423d8c": [
+          25.0,
+          22.0,
+          23.0
+        ],
+        "18e3096b-7f87-4429-ac38-c30e7636fd33": [
+          25.0,
+          28.0,
+          26.0
+        ],
+        "534c8dbb-595f-414d-9d1a-8012092a3dba": [
+          25.0,
+          23.0,
+          24.0
+        ],
+        "200c41e8-90a6-48b7-ae81-3d8a18119250": [
+          27.0,
+          21.0,
+          29.0
+        ],
+        "a5b090d5-c00b-4664-a568-5b2b004397dd": [
+          27.0,
+          21.0,
+          22.0
+        ],
+        "389216fe-6112-45e6-bb84-d259f038075d": [
+          27.0,
+          26.0,
+          28.0
+        ],
+        "41baa471-f92a-4669-b16d-700dae4b28fa": [
+          28.0,
+          23.0,
+          27.0
+        ],
+        "92d4839d-3e86-4c7c-aae0-5b720630b279": [
+          29.0,
+          31.0,
+          21.0
+        ],
+        "db9be750-2292-4ba3-b48c-9f02ef6451bd": [
+          29.0,
+          24.0,
+          26.0
+        ],
+        "332a72b5-6247-474d-a264-32cdb6de928e": [
+          29.0,
+          30.0,
+          28.0
+        ],
+        "08ddceb2-06b5-4cf3-aaeb-d001e5702bcb": [
+          30.0,
+          27.0,
+          34.0
+        ],
+        "208e03bb-767c-4a7c-8267-ea13b8513729": [
+          30.0,
+          22.0,
+          29.0
+        ],
+        "5f33803c-0aba-433f-8f49-da6fbc238d02": [
+          30.0,
+          30.0,
+          30.0
+        ],
+        "e882b635-22ab-4890-8083-cbffe0449e1a": [
+          32.0,
+          19.0,
+          23.0
+        ],
+        "876784c8-f4a4-481e-a4e0-8244c68a1268": [
+          33.0,
+          34.0,
+          29.0
+        ]
+      }
+    },
+    "7b15cbdf-5e64-48cd-982e-1fa8569a0ffb": {
+      "name": "Fall 2023",
+      "date": "2023-08-18",
+      "date_created": "2025-08-14 19:49:03",
+      "results": {
+        "5f33803c-0aba-433f-8f49-da6fbc238d02": [
+          34.0,
+          37.0,
+          38.0
+        ],
+        "56d58182-5a4f-4f54-89f6-ae9298a56266": [
+          12.0,
+          26.0,
+          25.0
+        ],
+        "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": [
+          24.0,
+          26.0,
+          33.0
+        ],
+        "6b52db86-ef56-4ef1-b558-620fb0d32d25": [
+          29.0,
+          29.0,
+          26.0
+        ],
+        "38becf4f-9188-4e3c-9592-85459d5820be": [
+          27.0,
+          26.0,
+          28.0
+        ],
+        "208e03bb-767c-4a7c-8267-ea13b8513729": [
+          31.0,
+          32.0,
+          30.0
+        ],
+        "4d3921ae-0952-4c5b-9614-440177ee8351": [
+          30.0,
+          29.0,
+          33.0
+        ],
+        "7ae5f963-8d13-4568-8335-3880bdddd6c3": [
+          8.0,
+          10.0,
+          9.0
+        ],
+        "94abfb58-f643-4d38-8add-69d579baa284": [
+          11.0,
+          15.0,
+          14.0
+        ],
+        "a43e6cec-4ad6-4d9f-9cce-614e18306833": [
+          29.0,
+          28.0,
+          31.0
+        ],
+        "200c41e8-90a6-48b7-ae81-3d8a18119250": [
+          21.0,
+          30.0,
+          30.0
+        ],
+        "db9be750-2292-4ba3-b48c-9f02ef6451bd": [
+          35.0,
+          27.0,
+          33.0
+        ],
+        "5b555718-e24a-4123-9d97-9ced1ccfd6f3": [
+          25.0,
+          26.0,
+          18.0
+        ],
+        "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": [
+          21.0,
+          32.0,
+          30.0
+        ],
+        "876784c8-f4a4-481e-a4e0-8244c68a1268": [
+          36.0,
+          33.0,
+          32.0
+        ],
+        "41baa471-f92a-4669-b16d-700dae4b28fa": [
+          26.0,
+          30.0,
+          29.0
+        ],
+        "7ca33538-f805-49a8-82fa-7d20a357f0ba": [
+          7.0,
+          9.0,
+          10.0
+        ],
+        "a7de17bf-4e13-447a-b4e6-853d90e1ebd2": [
+          21.0,
+          18.0,
+          23.0
+        ],
+        "244a2ff0-9962-431d-988e-e5067606abe2": [
+          11.0,
+          15.0,
+          14.0
+        ],
+        "92d4839d-3e86-4c7c-aae0-5b720630b279": [
+          29.0,
+          26.0,
+          23.0
+        ],
+        "c639ec2a-f309-4a55-8fa5-8c4a5ff8035f": [
+          2.0,
+          9.0,
+          10.0
+        ],
+        "2e007091-36b1-402e-967e-30a7e701dbf8": [
+          15.0,
+          11.0,
+          18.0
+        ],
+        "c8eba411-5e8f-4d26-95e8-8fadb64fde5e": [
+          29.0,
+          30.0,
+          22.0
+        ],
+        "2572c5ea-f2d4-4fda-af02-4a2db4161855": [
+          8.0,
+          15.0,
+          12.0
+        ],
+        "534c8dbb-595f-414d-9d1a-8012092a3dba": [
+          25.0,
+          27.0,
+          26.0
+        ],
+        "a57f484f-97e1-4dcd-af22-8cfaa77f3b68": [
+          30.0,
+          31.0,
+          26.0
+        ],
+        "32aca080-4817-44dd-bd3a-b4ba4d87e0a4": [
+          13.0,
+          9.0,
+          18.0
+        ],
+        "a1131332-bd32-453a-881b-3f71f3389c3b": [
+          21.0,
+          19.0,
+          23.0
+        ],
+        "1330355b-b7e0-441a-932b-7027b1c5aace": [
+          24.0,
+          26.0,
+          29.0
+        ],
+        "03949d32-5836-4e39-a1b2-09549c1084e1": [
+          20.0,
+          30.0,
+          29.0
+        ],
+        "e788adb2-2af6-4e49-86a2-bc698e3f292c": [
+          15.0,
+          14.0,
+          20.0
+        ],
+        "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": [
+          23.0,
+          17.0,
+          23.0
+        ],
+        "1966f0f3-2524-4045-b1c8-aeaf315ec266": [
+          15.0,
+          21.0,
+          21.0
+        ],
+        "b8d707f8-faf5-4278-b2c2-b1ce97757747": [
+          20.0,
+          13.0,
+          13.0
+        ],
+        "6c26fc7b-04df-401e-8dd7-75cc169f5b52": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "b1070744-3027-4aca-9aa0-0d4cc8d275e8": [
+          12.0,
+          8.0,
+          14.0
+        ],
+        "fc6ac298-4741-4961-ae13-c31dd1515f0f": [
+          12.0,
+          8.0,
+          12.0
+        ],
+        "256ec882-362b-4d4d-bf6a-458c3a07b347": [
+          17.0,
+          20.0,
+          20.0
+        ],
+        "53d0d435-2c5b-4a94-ac34-62cc2efd1eaf": [
+          22.0,
+          12.0,
+          21.0
+        ],
+        "e4f6bceb-5696-428e-b9d8-10dd0d4781cb": [
+          35.0,
+          33.0,
+          32.0
+        ],
+        "41e30d7e-2453-46b1-a4b8-7b74d5149665": [
+          5.0,
+          16.0,
+          11.0
+        ],
+        "8ed34d15-048e-4141-bf41-6e8d6179149a": [
+          35.0,
+          39.0,
+          30.0
+        ],
+        "397f524a-ecf6-44c8-abc0-c86ccec4705b": [
+          1.0,
+          8.0,
+          5.0
+        ],
+        "ec9f330c-8391-4039-9b77-aabaf7250145": [
+          13.0,
+          17.0,
+          11.0
+        ],
+        "5d4d2e03-3844-404d-9013-c692fb7e1b93": [
+          8.0,
+          9.0,
+          7.0
+        ],
+        "8ca3a584-e501-461e-b73c-7d7f80204987": [
+          6.0,
+          7.0,
+          12.0
+        ],
+        "b890b262-f41d-4a53-9fdd-5cd430ec1d51": [
+          19.0,
+          25.0,
+          24.0
+        ],
+        "5f6409ef-a2ae-4708-9ae3-b010e6769933": [
+          22.0,
+          29.0,
+          12.0
+        ],
+        "847c980c-baf3-4609-a1ca-47755cc9fd3b": [
+          17.0,
+          10.0,
+          14.0
+        ],
+        "880659a0-70c3-466f-b921-1d69668dab78": [
+          22.0,
+          12.0,
+          11.0
+        ],
+        "c660a300-0b83-4c50-aec9-2979633183f7": [
+          15.0,
+          28.0,
+          24.0
+        ],
+        "f77cf193-fa61-40c7-9814-e2ee60032ece": [
+          8.0,
+          3.0,
+          3.0
+        ],
+        "389216fe-6112-45e6-bb84-d259f038075d": [
+          18.0,
+          22.0,
+          19.0
+        ],
+        "228dc074-88b5-4bf6-a652-9747cd9da0e1": [
+          13.0,
+          11.0,
+          6.0
+        ],
+        "a5b090d5-c00b-4664-a568-5b2b004397dd": [
+          15.0,
+          15.0,
+          25.0
+        ],
+        "62ac02b4-a34c-430b-9e61-f7dc78e28f8b": [
+          15.0,
+          16.0,
+          13.0
+        ],
+        "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": [
+          3.0,
+          5.0,
+          4.0
+        ],
+        "4f5e2966-b0ae-495f-a784-baa80e0ed889": [
+          15.0,
+          15.0,
+          10.0
+        ],
+        "16fe01c0-5616-46db-9402-566ba56b7332": [
+          9.0,
+          15.0,
+          15.0
+        ],
+        "7f06cd53-fe7f-432b-8b41-da8424594782": [
+          12.0,
+          16.0,
+          8.0
+        ],
+        "3d5305c1-8715-4845-8676-f8feee4617d8": [
+          18.0,
+          16.0,
+          11.0
+        ],
+        "3dec77b9-1510-4655-a57c-1bf06a9dc98e": [
+          11.0,
+          12.0,
+          13.0
+        ],
+        "27666889-80b5-4977-b95b-a120f275a95a": [
+          18.0,
+          13.0,
+          15.0
+        ],
+        "d84bf5eb-8a52-4f5d-96ca-124da142a9c7": [
+          16.0,
+          18.0,
+          0.0
+        ]
+      }
+    },
+    "f0bdcab7-017e-4c25-a12c-23920f1dfb33": {
+      "name": "Spring 2024",
+      "date": "2024-04-19",
+      "date_created": "2025-08-14 19:50:11",
+      "results": {
+        "47e854de-50d4-49cc-9255-8724f246b033": [
+          28.0,
+          32.0,
+          34.0
+        ],
+        "f77cf193-fa61-40c7-9814-e2ee60032ece": [
+          9.0,
+          19.0,
+          13.0
+        ],
+        "3e268adc-ee81-49cd-bc40-b741752be971": [
+          26.0,
+          27.0,
+          37.0
+        ],
+        "41baa471-f92a-4669-b16d-700dae4b28fa": [
+          27.0,
+          30.0,
+          35.0
+        ],
+        "244a2ff0-9962-431d-988e-e5067606abe2": [
+          14.0,
+          19.0,
+          19.0
+        ],
+        "7ca33538-f805-49a8-82fa-7d20a357f0ba": [
+          17.0,
+          17.0,
+          12.0
+        ],
+        "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": [
+          12.0,
+          14.0,
+          11.0
+        ],
+        "a5b090d5-c00b-4664-a568-5b2b004397dd": [
+          31.0,
+          27.0,
+          28.0
+        ],
+        "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": [
+          22.0,
+          31.0,
+          33.0
+        ],
+        "876784c8-f4a4-481e-a4e0-8244c68a1268": [
+          33.0,
+          38.0,
+          35.0
+        ],
+        "6b52db86-ef56-4ef1-b558-620fb0d32d25": [
+          26.0,
+          30.0,
+          32.0
+        ],
+        "f53aa1f7-bfd2-4122-b3ad-e5752f423d8c": [
+          26.0,
+          30.0,
+          30.0
+        ],
+        "fc6ac298-4741-4961-ae13-c31dd1515f0f": [
+          13.0,
+          12.0,
+          17.0
+        ],
+        "c639ec2a-f309-4a55-8fa5-8c4a5ff8035f": [
+          5.0,
+          12.0,
+          6.0
+        ],
+        "a43e6cec-4ad6-4d9f-9cce-614e18306833": [
+          31.0,
+          32.0,
+          28.0
+        ],
+        "4a17c0ce-02c6-449e-9e61-1ab299e64bd5": [
+          19.0,
+          18.0,
+          17.0
+        ],
+        "7ae5f963-8d13-4568-8335-3880bdddd6c3": [
+          10.0,
+          10.0,
+          11.0
+        ],
+        "53d0d435-2c5b-4a94-ac34-62cc2efd1eaf": [
+          25.0,
+          26.0,
+          27.0
+        ],
+        "8ed34d15-048e-4141-bf41-6e8d6179149a": [
+          40.0,
+          38.0,
+          40.0
+        ],
+        "4d3921ae-0952-4c5b-9614-440177ee8351": [
+          31.0,
+          32.0,
+          31.0
+        ],
+        "92d4839d-3e86-4c7c-aae0-5b720630b279": [
+          28.0,
+          27.0,
+          29.0
+        ],
+        "880659a0-70c3-466f-b921-1d69668dab78": [
+          20.0,
+          16.0,
+          17.0
+        ],
+        "a7de17bf-4e13-447a-b4e6-853d90e1ebd2": [
+          20.0,
+          19.0,
+          26.0
+        ],
+        "2572c5ea-f2d4-4fda-af02-4a2db4161855": [
+          11.0,
+          15.0,
+          12.0
+        ],
+        "1966f0f3-2524-4045-b1c8-aeaf315ec266": [
+          19.0,
+          21.0,
+          26.0
+        ],
+        "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": [
+          23.0,
+          30.0,
+          29.0
+        ],
+        "56d58182-5a4f-4f54-89f6-ae9298a56266": [
+          29.0,
+          24.0,
+          26.0
+        ],
+        "94abfb58-f643-4d38-8add-69d579baa284": [
+          9.0,
+          12.0,
+          14.0
+        ],
+        "228dc074-88b5-4bf6-a652-9747cd9da0e1": [
+          10.0,
+          10.0,
+          16.0
+        ],
+        "5d4d2e03-3844-404d-9013-c692fb7e1b93": [
+          17.0,
+          12.0,
+          13.0
+        ],
+        "256ec882-362b-4d4d-bf6a-458c3a07b347": [
+          26.0,
+          20.0,
+          24.0
+        ],
+        "08ddceb2-06b5-4cf3-aaeb-d001e5702bcb": [
+          34.0,
+          28.0,
+          28.0
+        ],
+        "8647f64c-4808-4949-ac40-4fea861575a4": [
+          21.0,
+          21.0,
+          22.0
+        ],
+        "b1070744-3027-4aca-9aa0-0d4cc8d275e8": [
+          11.0,
+          8.0,
+          17.0
+        ],
+        "e882b635-22ab-4890-8083-cbffe0449e1a": [
+          31.0,
+          29.0,
+          24.0
+        ],
+        "397f524a-ecf6-44c8-abc0-c86ccec4705b": [
+          10.0,
+          8.0,
+          8.0
+        ],
+        "d84bf5eb-8a52-4f5d-96ca-124da142a9c7": [
+          20.0,
+          18.0,
+          18.0
+        ],
+        "b2c17968-2247-4cfd-a08f-4804d435cab1": [
+          12.0,
+          16.0,
+          14.0
+        ],
+        "49861073-9623-4781-adc2-72659abe2996": [
+          15.0,
+          20.0,
+          19.0
+        ],
+        "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": [
+          23.0,
+          21.0,
+          21.0
+        ],
+        "b890b262-f41d-4a53-9fdd-5cd430ec1d51": [
+          28.0,
+          21.0,
+          23.0
+        ],
+        "c8eba411-5e8f-4d26-95e8-8fadb64fde5e": [
+          27.0,
+          24.0,
+          25.0
+        ],
+        "db9be750-2292-4ba3-b48c-9f02ef6451bd": [
+          31.0,
+          30.0,
+          26.0
+        ],
+        "af46d924-ecc3-40a3-b346-45bdd92e7058": [
+          18.0,
+          14.0,
+          18.0
+        ],
+        "7c26243f-8c75-4009-bddd-44fe706f1f5a": [
+          30.0,
+          32.0,
+          32.0
+        ],
+        "b8d707f8-faf5-4278-b2c2-b1ce97757747": [
+          18.0,
+          14.0,
+          12.0
+        ],
+        "a57f484f-97e1-4dcd-af22-8cfaa77f3b68": [
+          25.0,
+          29.0,
+          23.0
+        ],
+        "5f6409ef-a2ae-4708-9ae3-b010e6769933": [
+          18.0,
+          26.0,
+          21.0
+        ],
+        "847c980c-baf3-4609-a1ca-47755cc9fd3b": [
+          12.0,
+          26.0,
+          17.0
+        ],
+        "c660a300-0b83-4c50-aec9-2979633183f7": [
+          23.0,
+          29.0,
+          25.0
+        ],
+        "03949d32-5836-4e39-a1b2-09549c1084e1": [
+          27.0,
+          30.0,
+          25.0
+        ],
+        "407147aa-0a08-43b1-82bb-49e289907acd": [
+          29.0,
+          29.0,
+          25.0
+        ],
+        "41708f04-df13-4be4-9b86-12864a50e6bb": [
+          22.0,
+          26.0,
+          23.0
+        ],
+        "5b555718-e24a-4123-9d97-9ced1ccfd6f3": [
+          22.0,
+          16.0,
+          19.0
+        ],
+        "62ac02b4-a34c-430b-9e61-f7dc78e28f8b": [
+          15.0,
+          19.0,
+          19.0
+        ],
+        "4f5e2966-b0ae-495f-a784-baa80e0ed889": [
+          20.0,
+          24.0,
+          13.0
+        ],
+        "32c12c58-59be-4ebe-bc6f-210aa59489be": [
+          11.0,
+          5.0,
+          9.0
+        ],
+        "d3a55071-2800-4b53-9111-b3d8d4e48bfe": [
+          16.0,
+          17.0,
+          21.0
+        ],
+        "e7b865c5-6eba-4281-89f1-5f6c9edd2a13": [
+          25.0,
+          22.0,
+          21.0
+        ],
+        "e3c59bdb-bd81-459b-8a5d-eba0d49ce203": [
+          11.0,
+          10.0,
+          10.0
+        ],
+        "a1131332-bd32-453a-881b-3f71f3389c3b": [
+          18.0,
+          16.0,
+          19.0
+        ],
+        "faef7b1e-985b-4769-a15c-76ffdfd9d776": [
+          26.0,
+          25.0,
+          30.0
+        ],
+        "09017a95-dad2-4538-9e0e-0595da6c6aac": [
+          31.0,
+          39.0,
+          32.0
+        ],
+        "e9d43728-c9cd-447b-aefb-858b595756b9": [
+          26.0,
+          28.0,
+          23.0
+        ],
+        "e650e8dc-b0ac-4228-9d31-930396e58b6e": [
+          1.0,
+          5.0,
+          3.0
+        ],
+        "27666889-80b5-4977-b95b-a120f275a95a": [
+          19.0,
+          15.0,
+          18.0
+        ],
+        "16fe01c0-5616-46db-9402-566ba56b7332": [
+          12.0,
+          11.0,
+          20.0
+        ],
+        "3dec77b9-1510-4655-a57c-1bf06a9dc98e": [
+          17.0,
+          16.0,
+          17.0
+        ],
+        "0d79c423-2315-4568-9a65-b4b430e18200": [
+          25.0,
+          20.0,
+          16.0
+        ],
+        "e3ba7e15-d93d-4a0a-bfb8-2f1577cca23b": [
+          24.0,
+          23.0,
+          20.0
+        ],
+        "c52aabf7-b599-4cad-be72-9ddc1ee8cc7f": [
+          16.0,
+          13.0,
+          16.0
+        ],
+        "4315f8ba-87e2-4f1c-9a9c-8b3f2fabe24e": [
+          11.0,
+          7.0,
+          7.0
+        ]
+      }
+    },
+    "b9646aac-746d-4ddd-99be-8e1a4c665142": {
+      "name": "Fall 2024",
+      "date": "2024-08-16",
+      "date_created": "2025-08-14 19:51:18",
+      "results": {
+        "ec9f330c-8391-4039-9b77-aabaf7250145": [
+          26.0,
+          15.0,
+          20.0
+        ],
+        "b8d707f8-faf5-4278-b2c2-b1ce97757747": [
+          20.0,
+          14.0,
+          23.0
+        ],
+        "d84bf5eb-8a52-4f5d-96ca-124da142a9c7": [
+          15.0,
+          25.0,
+          21.0
+        ],
+        "244a2ff0-9962-431d-988e-e5067606abe2": [
+          16.0,
+          16.0,
+          20.0
+        ],
+        "228dc074-88b5-4bf6-a652-9747cd9da0e1": [
+          11.0,
+          14.0,
+          13.0
+        ],
+        "8ed34d15-048e-4141-bf41-6e8d6179149a": [
+          38.0,
+          37.0,
+          42.0
+        ],
+        "880659a0-70c3-466f-b921-1d69668dab78": [
+          19.0,
+          17.0,
+          18.0
+        ],
+        "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": [
+          24.0,
+          25.0,
+          35.0
+        ],
+        "7ae5f963-8d13-4568-8335-3880bdddd6c3": [
+          7.0,
+          5.0,
+          14.0
+        ],
+        "b890b262-f41d-4a53-9fdd-5cd430ec1d51": [
+          27.0,
+          27.0,
+          24.0
+        ],
+        "2572c5ea-f2d4-4fda-af02-4a2db4161855": [
+          18.0,
+          21.0,
+          6.0
+        ],
+        "6c26fc7b-04df-401e-8dd7-75cc169f5b52": [
+          30.0,
+          17.0,
+          26.0
+        ],
+        "1966f0f3-2524-4045-b1c8-aeaf315ec266": [
+          24.0,
+          22.0,
+          23.0
+        ],
+        "03949d32-5836-4e39-a1b2-09549c1084e1": [
+          22.0,
+          30.0,
+          30.0
+        ],
+        "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": [
+          27.0,
+          33.0,
+          27.0
+        ],
+        "a1131332-bd32-453a-881b-3f71f3389c3b": [
+          23.0,
+          21.0,
+          20.0
+        ],
+        "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": [
+          22.0,
+          19.0,
+          23.0
+        ],
+        "a7de17bf-4e13-447a-b4e6-853d90e1ebd2": [
+          16.0,
+          20.0,
+          24.0
+        ],
+        "c639ec2a-f309-4a55-8fa5-8c4a5ff8035f": [
+          2.0,
+          9.0,
+          8.0
+        ],
+        "d2268dfb-e34d-4882-bdf8-852504de1dba": [
+          29.0,
+          22.0,
+          28.0
+        ],
+        "876784c8-f4a4-481e-a4e0-8244c68a1268": [
+          27.0,
+          35.0,
+          36.0
+        ],
+        "38becf4f-9188-4e3c-9592-85459d5820be": [
+          26.0,
+          28.0,
+          29.0
+        ],
+        "407147aa-0a08-43b1-82bb-49e289907acd": [
+          24.0,
+          27.0,
+          30.0
+        ],
+        "94abfb58-f643-4d38-8add-69d579baa284": [
+          16.0,
+          12.0,
+          11.0
+        ],
+        "f77cf193-fa61-40c7-9814-e2ee60032ece": [
+          12.0,
+          7.0,
+          11.0
+        ],
+        "4d3921ae-0952-4c5b-9614-440177ee8351": [
+          22.0,
+          32.0,
+          29.0
+        ],
+        "a43e6cec-4ad6-4d9f-9cce-614e18306833": [
+          25.0,
+          22.0,
+          30.0
+        ],
+        "a57f484f-97e1-4dcd-af22-8cfaa77f3b68": [
+          21.0,
+          24.0,
+          26.0
+        ],
+        "7c26243f-8c75-4009-bddd-44fe706f1f5a": [
+          28.0,
+          24.0,
+          31.0
+        ],
+        "3d5305c1-8715-4845-8676-f8feee4617d8": [
+          22.0,
+          15.0,
+          19.0
+        ],
+        "db9be750-2292-4ba3-b48c-9f02ef6451bd": [
+          25.0,
+          27.0,
+          28.0
+        ],
+        "5b555718-e24a-4123-9d97-9ced1ccfd6f3": [
+          19.0,
+          20.0,
+          23.0
+        ],
+        "56d58182-5a4f-4f54-89f6-ae9298a56266": [
+          17.0,
+          25.0,
+          20.0
+        ],
+        "4315f8ba-87e2-4f1c-9a9c-8b3f2fabe24e": [
+          13.0,
+          8.0,
+          8.0
+        ],
+        "5d4d2e03-3844-404d-9013-c692fb7e1b93": [
+          13.0,
+          13.0,
+          5.0
+        ],
+        "32aca080-4817-44dd-bd3a-b4ba4d87e0a4": [
+          19.0,
+          12.0,
+          11.0
+        ],
+        "5f33803c-0aba-433f-8f49-da6fbc238d02": [
+          31.0,
+          34.0,
+          30.0
+        ],
+        "08ddceb2-06b5-4cf3-aaeb-d001e5702bcb": [
+          25.0,
+          24.0,
+          26.0
+        ],
+        "f87a74b9-0e67-4af0-af7f-fb3bd00beb7e": [
+          30.0,
+          22.0,
+          31.0
+        ],
+        "a5b090d5-c00b-4664-a568-5b2b004397dd": [
+          23.0,
+          22.0,
+          20.0
+        ],
+        "3dec77b9-1510-4655-a57c-1bf06a9dc98e": [
+          14.0,
+          11.0,
+          15.0
+        ],
+        "16fe01c0-5616-46db-9402-566ba56b7332": [
+          12.0,
+          10.0,
+          14.0
+        ],
+        "32c12c58-59be-4ebe-bc6f-210aa59489be": [
+          7.0,
+          5.0,
+          3.0
+        ],
+        "d3a55071-2800-4b53-9111-b3d8d4e48bfe": [
+          21.0,
+          15.0,
+          17.0
+        ],
+        "92d4839d-3e86-4c7c-aae0-5b720630b279": [
+          24.0,
+          19.0,
+          28.0
+        ],
+        "b1070744-3027-4aca-9aa0-0d4cc8d275e8": [
+          10.0,
+          5.0,
+          8.0
+        ],
+        "41baa471-f92a-4669-b16d-700dae4b28fa": [
+          26.0,
+          32.0,
+          16.0
+        ],
+        "62ac02b4-a34c-430b-9e61-f7dc78e28f8b": [
+          15.0,
+          15.0,
+          11.0
+        ],
+        "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": [
+          5.0,
+          3.0,
+          2.0
+        ],
+        "18e3096b-7f87-4429-ac38-c30e7636fd33": [
+          19.0,
+          21.0,
+          21.0
+        ],
+        "4f5e2966-b0ae-495f-a784-baa80e0ed889": [
+          14.0,
+          12.0,
+          12.0
+        ],
+        "faef7b1e-985b-4769-a15c-76ffdfd9d776": [
+          19.0,
+          25.0,
+          25.0
+        ],
+        "0d79c423-2315-4568-9a65-b4b430e18200": [
+          21.0,
+          11.0,
+          19.0
+        ],
+        "4a17c0ce-02c6-449e-9e61-1ab299e64bd5": [
+          14.0,
+          8.0,
+          6.0
+        ]
+      }
+    },
+    "ebfea628-13f4-47e3-803e-45eeb87ef581": {
+      "name": "Spring 2025",
+      "date": "2025-05-16",
+      "date_created": "2025-08-25 15:17:44",
+      "results": {
+        "397f524a-ecf6-44c8-abc0-c86ccec4705b": [
+          7.0,
+          11.0,
+          13.0
+        ],
+        "27666889-80b5-4977-b95b-a120f275a95a": [
+          15.0,
+          11.0,
+          11.0
+        ],
+        "c8eba411-5e8f-4d26-95e8-8fadb64fde5e": [
+          23.0,
+          20.0,
+          19.0
+        ],
+        "d84bf5eb-8a52-4f5d-96ca-124da142a9c7": [
+          21.0,
+          19.0,
+          19.0
+        ],
+        "03949d32-5836-4e39-a1b2-09549c1084e1": [
+          27.0,
+          30.0,
+          32.0
+        ],
+        "5d4d2e03-3844-404d-9013-c692fb7e1b93": [
+          10.0,
+          11.0,
+          12.0
+        ],
+        "c52aabf7-b599-4cad-be72-9ddc1ee8cc7f": [
+          23.0,
+          28.0,
+          18.0
+        ],
+        "5b555718-e24a-4123-9d97-9ced1ccfd6f3": [
+          32.0,
+          29.0,
+          23.0
+        ],
+        "a57f484f-97e1-4dcd-af22-8cfaa77f3b68": [
+          35.0,
+          22.0,
+          22.0
+        ],
+        "2168fb73-464d-4a6c-b009-d605a9c1fd15": [
+          30.0,
+          30.0,
+          28.0
+        ],
+        "3295da14-a6cf-41e0-8f5a-0a6b31ba6ca5": [
+          25.0,
+          31.0,
+          32.0
+        ],
+        "a1131332-bd32-453a-881b-3f71f3389c3b": [
+          21.0,
+          19.0,
+          22.0
+        ],
+        "7c26243f-8c75-4009-bddd-44fe706f1f5a": [
+          29.0,
+          27.0,
+          31.0
+        ],
+        "e3ba7e15-d93d-4a0a-bfb8-2f1577cca23b": [
+          24.0,
+          26.0,
+          25.0
+        ],
+        "4315f8ba-87e2-4f1c-9a9c-8b3f2fabe24e": [
+          16.0,
+          12.0,
+          7.0
+        ],
+        "200c41e8-90a6-48b7-ae81-3d8a18119250": [
+          26.0,
+          29.0,
+          24.0
+        ],
+        "2572c5ea-f2d4-4fda-af02-4a2db4161855": [
+          18.0,
+          10.0,
+          17.0
+        ],
+        "a7de17bf-4e13-447a-b4e6-853d90e1ebd2": [
+          27.0,
+          25.0,
+          24.0
+        ],
+        "f7e924e7-7b03-46ad-aa6f-e2eb0b9cb0e3": [
+          25.0,
+          29.0,
+          28.0
+        ],
+        "8647f64c-4808-4949-ac40-4fea861575a4": [
+          17.0,
+          24.0,
+          16.0
+        ],
+        "1950b491-b8f5-4ac9-be38-adfd2724b913": [
+          27.0,
+          25.0,
+          21.0
+        ],
+        "53d0d435-2c5b-4a94-ac34-62cc2efd1eaf": [
+          24.0,
+          27.0,
+          25.0
+        ],
+        "38becf4f-9188-4e3c-9592-85459d5820be": [
+          33.0,
+          32.0,
+          31.0
+        ],
+        "47e854de-50d4-49cc-9255-8724f246b033": [
+          32.0,
+          31.0,
+          23.0
+        ],
+        "8ed34d15-048e-4141-bf41-6e8d6179149a": [
+          35.0,
+          33.0,
+          36.0
+        ],
+        "d684aca1-0195-4028-95de-88d1d46ad4e6": [
+          17.0,
+          13.0,
+          10.0
+        ],
+        "94abfb58-f643-4d38-8add-69d579baa284": [
+          17.0,
+          9.0,
+          12.0
+        ],
+        "d2268dfb-e34d-4882-bdf8-852504de1dba": [
+          27.0,
+          28.0,
+          27.0
+        ],
+        "e7b865c5-6eba-4281-89f1-5f6c9edd2a13": [
+          22.0,
+          22.0,
+          33.0
+        ],
+        "ae31f38b-ace4-46de-ba9b-5204ec5e45d4": [
+          10.0,
+          12.0,
+          8.0
+        ],
+        "b8d707f8-faf5-4278-b2c2-b1ce97757747": [
+          26.0,
+          23.0,
+          24.0
+        ],
+        "a513148b-e25a-48d3-a57c-f296b6015499": [
+          23.0,
+          32.0,
+          24.0
+        ],
+        "87d13488-9652-4b54-9cc6-f13d88152117": [
+          29.0,
+          21.0,
+          28.0
+        ],
+        "5de006e4-4c09-4660-8440-3c5799a39608": [
+          8.0,
+          8.0,
+          7.0
+        ],
+        "2e007091-36b1-402e-967e-30a7e701dbf8": [
+          17.0,
+          14.0,
+          10.0
+        ],
+        "4f5e2966-b0ae-495f-a784-baa80e0ed889": [
+          19.0,
+          15.0,
+          18.0
+        ],
+        "4d3921ae-0952-4c5b-9614-440177ee8351": [
+          35.0,
+          24.0,
+          36.0
+        ],
+        "a0b9cd6d-5843-4ca8-8d08-bc222d009fca": [
+          25.0,
+          21.0,
+          26.0
+        ],
+        "92d4839d-3e86-4c7c-aae0-5b720630b279": [
+          31.0,
+          30.0,
+          31.0
+        ],
+        "f87a74b9-0e67-4af0-af7f-fb3bd00beb7e": [
+          30.0,
+          35.0,
+          0.0
+        ],
+        "847c980c-baf3-4609-a1ca-47755cc9fd3b": [
+          9.0,
+          18.0,
+          0.0
+        ],
+        "18e3096b-7f87-4429-ac38-c30e7636fd33": [
+          27.0,
+          23.0,
+          21.0
+        ],
+        "b2c17968-2247-4cfd-a08f-4804d435cab1": [
+          10.0,
+          10.0,
+          11.0
+        ],
+        "a43e6cec-4ad6-4d9f-9cce-614e18306833": [
+          26.0,
+          22.0,
+          29.0
+        ],
+        "e4162652-e7c6-4c07-a028-02b50fbf235c": [
+          12.0,
+          11.0,
+          10.0
+        ],
+        "7ebccd8c-850f-4bea-9e27-5d1f0ce387a9": [
+          32.0,
+          31.0,
+          28.0
+        ],
+        "32c12c58-59be-4ebe-bc6f-210aa59489be": [
+          1.0,
+          5.0,
+          9.0
+        ],
+        "407147aa-0a08-43b1-82bb-49e289907acd": [
+          24.0,
+          29.0,
+          27.0
+        ],
+        "6b52db86-ef56-4ef1-b558-620fb0d32d25": [
+          34.0,
+          34.0,
+          34.0
+        ],
+        "ec9f330c-8391-4039-9b77-aabaf7250145": [
+          22.0,
+          21.0,
+          16.0
+        ],
+        "fc6ac298-4741-4961-ae13-c31dd1515f0f": [
+          9.0,
+          8.0,
+          10.0
+        ],
+        "d3a55071-2800-4b53-9111-b3d8d4e48bfe": [
+          23.0,
+          19.0,
+          19.0
+        ],
+        "0d79c423-2315-4568-9a65-b4b430e18200": [
+          31.0,
+          20.0,
+          20.0
+        ],
+        "ab13d155-6aa3-4228-930f-ed86d32669ba": [
+          23.0,
+          16.0,
+          19.0
+        ],
+        "3e268adc-ee81-49cd-bc40-b741752be971": [
+          22.0,
+          21.0,
+          21.0
+        ],
+        "5f6409ef-a2ae-4708-9ae3-b010e6769933": [
+          23.0,
+          17.0,
+          20.0
+        ]
+      }
+    }
+  },
+  "last_saved": "2025-08-27T13:52:36.201657",
+  "version": "1.0",
+  "settings": {
+    "admin_pin": "1215"
+  }
+}
