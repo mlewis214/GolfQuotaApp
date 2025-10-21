@@ -436,41 +436,40 @@ elif page == "Upload Results (CSV)":
     else:
         st.subheader("Upload Tournament Results from CSV")
 
-        # Clear instructions + sample format
         st.markdown("""
-**CSV should contain columns:** `Tournament_Name`, `Player_Name`, `Round_1`, `Round_2`, `Round_3`
+**CSV should contain columns:** `Tournament_Name`, `Player_Name`, `Round_1`, `Round_2`, `Round_3`  
+*(Optional)*: `Tournament_Date` in **MM/DD/YYYY**.
 
-📅 **Important:** For tournament dates, use **MM/DD/YYYY** (e.g., `03/15/2024`).  
-*(Optional)* You may include a `Tournament_Date` column in **MM/DD/YYYY** to attach a date.
-
-**View expected CSV format:**
-""")
+**Example**
+Tournament_Name,Player_Name,Round_1,Round_2,Round_3
+Spring Championship,John Smith,8,12,7
+Spring Championship,Mary Johnson,15,18,14
+Spring Championship,Bob Wilson,6,9,11
 
         # Downloadable template
+        """)
+
         import io
-        template = io.BytesIO()
-        template.write(
+        tmpl = io.BytesIO()
+        tmpl.write(
             b"Tournament_Name,Player_Name,Round_1,Round_2,Round_3,Tournament_Date (optional MM/DD/YYYY)\n"
             b"Spring Championship,John Smith,8,12,7,03/15/2024\n"
             b"Spring Championship,Mary Johnson,15,18,14,03/15/2024\n"
             b"Spring Championship,Bob Wilson,6,9,11,03/15/2024\n"
         )
-        template.seek(0)
-        st.download_button(
-            "Download CSV Template",
-            data=template,
-            file_name="tournament_results_template.csv",
-            mime="text/csv",
-        )
+        tmpl.seek(0)
+        st.download_button("Download CSV Template", data=tmpl, file_name="tournament_results_template.csv", mime="text/csv")
 
         st.write("---")
-        st.caption("Upload your CSV below:")
         up = st.file_uploader("Upload CSV", type=["csv"])
 
-        def _mmddyyyy_to_iso(datestr: str) -> str:
-            """Convert MM/DD/YYYY -> YYYY-MM-DD; return '' if invalid/empty."""
-            from datetime import datetime
-            s = (datestr or "").strip()
+        # --- helpers ---
+        from datetime import datetime
+        import pandas as pd, uuid
+        from rapidfuzz import process, fuzz
+
+        def _mmddyyyy_to_iso(s: str) -> str:
+            s = (s or "").strip()
             if not s:
                 return ""
             try:
@@ -478,8 +477,19 @@ elif page == "Upload Results (CSV)":
             except Exception:
                 return ""
 
-        if up is not None:
-            import pandas as pd
+        def _norm(s: str) -> str:
+            return (s or "").strip().casefold()
+
+        existing_players = data.get("players", {})
+        all_player_names = [p.get("name","") for p in existing_players.values()]
+
+        # Initialize review data
+        if "upload_rows" not in st.session_state:
+            st.session_state.upload_rows = None
+        if "row_choices" not in st.session_state:
+            st.session_state.row_choices = {}
+
+        if up is not None and st.session_state.upload_rows is None:
             try:
                 dfu = pd.read_csv(up, dtype=str).fillna("")
             except Exception as e:
@@ -487,87 +497,106 @@ elif page == "Upload Results (CSV)":
                 dfu = None
 
             if dfu is not None:
-                # Normalize headers (case-insensitive match)
                 cols = {c.strip().lower(): c for c in dfu.columns}
-                required = ["tournament_name", "player_name", "round_1", "round_2", "round_3"]
-                missing = [r for r in required if r not in cols]
+                req = ["tournament_name", "player_name", "round_1", "round_2", "round_3"]
+                missing = [r for r in req if r not in cols]
                 if missing:
                     st.error(f"Missing required columns: {', '.join(missing)}")
                 else:
-                    st.write("Preview:")
-                    st.dataframe(dfu.head(), use_container_width=True)
+                    rows = []
+                    for _, row in dfu.iterrows():
+                        pname = str(row[cols["player_name"]]).strip()
+                        tname = str(row[cols["tournament_name"]]).strip()
+                        tdate = _mmddyyyy_to_iso(str(row[cols["tournament_date"]])) if "tournament_date" in cols else ""
 
-                    if st.button("Apply Upload"):
-                        applied = 0
-                        created_tournaments = 0
-                        unknown_players = set()
+                        # fuzzy match top 3 candidates (>=70 similarity)
+                        suggestions = process.extract(pname, all_player_names, scorer=fuzz.token_sort_ratio, limit=3)
+                        similar = [s[0] for s in suggestions if s[1] >= 70]
+                        default_choice = f"Add NEW player: {pname}"
+                        if similar:
+                            default_choice = f"Match: {similar[0]}"
 
-                        # Build a fast name→pid map (case-insensitive)
-                        name_to_pid = { (p.get("name","").strip().lower()): pid for pid, p in data.get("players", {}).items() }
+                        rows.append({
+                            "tournament_name": tname,
+                            "tournament_date": tdate,
+                            "player_name": pname,
+                            "rounds": [
+                                str(row[cols["round_1"]]).strip(),
+                                str(row[cols["round_2"]]).strip(),
+                                str(row[cols["round_3"]]).strip()
+                            ],
+                            "suggestions": similar,
+                            "default_choice": default_choice,
+                        })
 
-                        for _, row in dfu.iterrows():
-                            tname = str(row[cols["tournament_name"]]).strip()
-                            pname = str(row[cols["player_name"]]).strip()
-                            r1 = str(row[cols["round_1"]]).strip()
-                            r2 = str(row[cols["round_2"]]).strip()
-                            r3 = str(row[cols["round_3"]]).strip()
-                            # Optional date
-                            tdate_iso = ""
-                            if "tournament_date" in cols:
-                                tdate_iso = _mmddyyyy_to_iso(str(row[cols["tournament_date"]]))
+                    st.session_state.upload_rows = rows
+                    st.session_state.row_choices = {i: r["default_choice"] for i, r in enumerate(rows)}
 
-                            if not tname or not pname:
-                                continue
+        # --- Review UI ---
+        if st.session_state.upload_rows:
+            st.info("Step 1 of 2 — Review fuzzy matches. Adjust dropdowns or choose to create new players.")
+            rows = st.session_state.upload_rows
 
-                            # find/create tournament
-                            # Keying scheme: lowercased name + '|' + date (if present)
-                            key_name = tname.strip().lower()
-                            tid = f"{key_name}|{tdate_iso}" if tdate_iso else None
+            existing_options = [f"Match: {nm}" for nm in all_player_names]
 
-                            # If date provided, use (name|date) key. Else try any existing by name; if none, create undated key.
-                            if tdate_iso:
-                                if tid not in data["tournaments"]:
-                                    data["tournaments"][tid] = {"name": tname, "date": tdate_iso, "results": {}}
-                                    created_tournaments += 1
-                            else:
-                                # try to find existing tournament(s) with same name (any date)
-                                found_tid = None
-                                for _tid, t in data.get("tournaments", {}).items():
-                                    if (t.get("name","").strip().lower() == key_name):
-                                        found_tid = _tid
-                                        break
-                                if found_tid:
-                                    tid = found_tid
-                                else:
-                                    tid = key_name  # undated key
-                                    if tid not in data["tournaments"]:
-                                        data["tournaments"][tid] = {"name": tname, "date": "", "results": {}}
-                                        created_tournaments += 1
+            for i, r in enumerate(rows):
+                with st.expander(f"{r['tournament_name']} — {r['player_name']}", expanded=False):
+                    add_new_opt = f"Add NEW player: {r['player_name']}"
+                    fuzzy_opts = [f"Match: {s}" for s in r["suggestions"]]
+                    all_opts = fuzzy_opts + existing_options + [add_new_opt]
 
-                            # Find player id (case-insensitive)
-                            pid = name_to_pid.get(pname.strip().lower())
-                            if not pid:
-                                unknown_players.add(pname)
-                                continue
+                    st.session_state.row_choices[i] = st.selectbox(
+                        "Match to player",
+                        options=all_opts,
+                        index= all_opts.index(r["default_choice"]) if r["default_choice"] in all_opts else len(all_opts)-1,
+                        key=f"row_sel_{i}"
+                    )
 
-                            # Coerce rounds to floats
-                            def _f(x):
-                                try:
-                                    return float(x)
-                                except Exception:
-                                    return 0.0
-                            rr = [_f(r1), _f(r2), _f(r3)]
+            st.write("---")
+            if st.button("Apply Upload (Step 2)"):
+                applied, created_players, created_tournaments = 0, 0, 0
+                from uuid import uuid4
 
-                            data["tournaments"].setdefault(tid, {}).setdefault("results", {})[pid] = rr
-                            applied += 1
+                for i, r in enumerate(rows):
+                    choice = st.session_state.row_choices[i]
+                    pname = r["player_name"]
+                    rounds = [float(x or 0) for x in r["rounds"]]
+                    tname = r["tournament_name"]
+                    tdate = r["tournament_date"]
 
-                        save_data(data)
-                        st.success(f"Applied {applied} rows."
-                                  + (f" Created {created_tournaments} tournament(s)." if created_tournaments else ""))
+                    # tournament ID
+                    key = f"{tname.lower()}|{tdate}" if tdate else tname.lower()
+                    if key not in data["tournaments"]:
+                        data["tournaments"][key] = {"name": tname, "date": tdate, "results": {}}
+                        created_tournaments += 1
 
-                        if unknown_players:
-                            st.warning("These player names were not found (case-insensitive match):  \n- " +
-                                       "\n- ".join(sorted(unknown_players)))
+                    # find player
+                    pid = None
+                    if choice.startswith("Match: "):
+                        match_name = choice.replace("Match: ", "").strip().lower()
+                        for p_id, p in data["players"].items():
+                            if p.get("name","").lower() == match_name:
+                                pid = p_id
+                                break
+                    else:
+                        new_pid = str(uuid4())[:8]
+                        data["players"][new_pid] = {
+                            "name": pname.title(),
+                            "age": 65,
+                            "initial_quota": 18,
+                            "rounds": []
+                        }
+                        pid = new_pid
+                        created_players += 1
+
+                    if pid:
+                        data["tournaments"][key]["results"][pid] = rounds
+                        applied += 1
+
+                save_data(data)
+                st.success(f"Applied {applied} rows — created {created_players} players, {created_tournaments} tournaments.")
+                st.session_state.upload_rows = None
+                st.session_state.row_choices = {}
 
 
 # -------------------------- Reports (Admin) --------------------------
