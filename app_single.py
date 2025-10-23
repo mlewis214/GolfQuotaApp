@@ -1,549 +1,350 @@
-
-
-# app_single.py
-from __future__ import annotations
-
-import json
-import os
-import sys
-from pathlib import Path
-from typing import Dict, Any, List, Tuple
-
+# app_single.py — GolfQuota (PIN-only login, fuzzy CSV upload, player editing, full quota view)
 import streamlit as st
-
-# ---------------------- Config / Secrets ----------------------
+import pandas as pd
+import json
+import uuid
 import os
+from datetime import datetime
+from rapidfuzz import process, fuzz
 
-def _safe_secret(key: str, default: str) -> str:
-    """Try Streamlit secrets (if available), else env var, else default—no file required."""
-    try:
-        return st.secrets.get(key, os.environ.get(key, default))  # works on Cloud, harmless locally
-    except Exception:
-        return os.environ.get(key, default)
+# ===================== App config & theme =====================
+st.set_page_config(page_title="Golf Quota Board", layout="wide")
 
-ADMIN_USER = _safe_secret("ADMIN_USER", "admin")
-ADMIN_PASS = _safe_secret("ADMIN_PASS", "pgapro")
-DEFAULT_ADMIN_PIN = _safe_secret("ADMIN_PIN", "1215")
+st.markdown("""
+<style>
+body, .stApp { background-color:#111 !important; color:#f5f5f5 !important; }
+div[data-testid="stSidebar"] { background-color:#000 !important; }
+h1,h2,h3,h4,h5,h6,label,p,div,span { color:#f5f5f5 !important; }
+div[data-testid="stDataFrame"] div[role="grid"] {
+  background:#1e1e1e; color:#f5f5f5; border:1px solid #ccc; border-radius:8px;
+}
+.stButton>button,.stDownloadButton>button {
+  background:#1e1e1e !important; color:#f5f5f5 !important; border:1px solid #ccc !important; border-radius:10px !important;
+}
+.danger>button { border-color:#ff6b6b !important; }
+</style>
+""", unsafe_allow_html=True)
 
-# ---------------------- Simple theme accents ----------------------
-PRIMARY = "#0B6CFB"
-BG_SOFT = "#F5F8FF"
-TABLE_BG = "#EEF3FF"
+# ===================== Data storage =====================
+DATA_FILE = "golf_data.json"
+ADMIN_PIN = "1215"
 
-st.markdown(
-    f"""
-    <style>
-      .stApp {{
-        background: white;
-      }}
-      .app-header {{
-        padding: 0.6rem 0.9rem;
-        background: linear-gradient(90deg, {BG_SOFT}, #ffffff);
-        border: 1px solid #e8eefc;
-        border-radius: 12px;
-        margin-bottom: 12px;
-      }}
-      .app-header h1, .app-header h2, .app-header h3 {{
-        color: {PRIMARY} !important;
-        margin: 0;
-        padding: 0;
-      }}
-      .blue-chip {{
-        display:inline-block; padding:2px 8px; border-radius:999px;
-        background:{TABLE_BG}; color:#0b2a88; font-size:0.82rem; border:1px solid #dfe7ff;
-      }}
-      .section-card {{
-        border:1px solid #e8eefc; border-radius:12px; padding:12px; background:#fff;
-      }}
-      /* soften dataframes */
-      div[data-testid="stDataFrame"] div[role="grid"] {{
-        background: {TABLE_BG}10;
-        border-radius: 8px;
-        border: 1px solid #e8eefc;
-      }}
-      .stDownloadButton > button, .stButton > button {{
-        border-radius:10px !important; border:1px solid #dbe4ff !important;
-      }}
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
-
-
-# ---------------------- Config / Secrets ----------------------
-ADMIN_USER = st.secrets.get("ADMIN_USER", "admin")
-ADMIN_PASS = st.secrets.get("ADMIN_PASS", "pgapro")
-DEFAULT_ADMIN_PIN = st.secrets.get("ADMIN_PIN", "1215")
-
-def _data_dir() -> Path:
-    """Store golf_data.json next to the EXE when frozen, otherwise next to this file."""
-    if getattr(sys, "frozen", False):
-        return Path(sys.executable).parent
-    return Path(__file__).parent
-
-DATA_FILE = _data_dir() / "golf_data.json"
-
-# ---------------------- Data I/O ----------------------
-def load_data() -> Dict[str, Any]:
-    if not DATA_FILE.exists():
-        base = {"players": {}, "tournaments": {}, "settings": {"admin_pin": DEFAULT_ADMIN_PIN}}
-        save_data(base)
-        return base
-    try:
+def load_data():
+    if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        # Backfill minimal structure
-        data.setdefault("players", {})
-        data.setdefault("tournaments", {})
-        data.setdefault("settings", {}).setdefault("admin_pin", DEFAULT_ADMIN_PIN)
-        return data
-    except Exception:
-        # recover with blank
-        base = {"players": {}, "tournaments": {}, "settings": {"admin_pin": DEFAULT_ADMIN_PIN}}
-        save_data(base)
-        return base
+            return json.load(f)
+    return {"players": {}, "tournaments": {}, "settings": {"admin_pin": ADMIN_PIN}}
 
-def save_data(data: Dict[str, Any]) -> None:
-    try:
-        with open(DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2)
-    except Exception as e:
-        st.error(f"Failed to save data: {e}")
+def save_data(data):
+    with open(DATA_FILE, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
 
-# ---------------------- Helpers ----------------------
-def tee_for_age(age: int | float | None) -> str:
-    """You can adapt tee logic; using a simple default now."""
-    a = 65 if age in (None, "") else int(age)
-    if a >= 70: return "Gold"
-    if a >= 60: return "White"
-    return "Blue"
+data = load_data()
 
-def _round_up(n: float) -> int:
-    import math
-    return int(math.ceil(n))
+# ===================== Helpers =====================
+def _normalize_date(s: str) -> str:
+    """Accepts YYYY-MM-DD, MM/DD/YYYY, or MM-DD-YYYY. Returns YYYY-MM-DD or ''."""
+    s = (s or "").strip()
+    if not s:
+        return ""
+    for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%m-%d-%Y"):
+        try:
+            return datetime.strptime(s, fmt).strftime("%Y-%m-%d")
+        except Exception:
+            continue
+    return ""
 
-def aggregate_player_rounds_from_tournaments(
-    tournaments: Dict[str, Any],
-) -> Dict[str, List[Dict[str, Any]]]:
-    """
-    Produce per-player list of rounds with date from tournament results.
-    Each 'round' entry is {'score': float, 'date': 'YYYY-MM-DD', 'tournament_id': tid, 'tournament_name': str}
-    """
-    out: Dict[str, List[Dict[str, Any]]] = {}
+def tee_for_age(age):
+    return "White" if int(age or 65) < 80 else "Gold"
+
+def current_quota(rounds, initial):
+    if not rounds:
+        return int(initial)
+    last9 = rounds[-9:]
+    top6 = sorted(last9, reverse=True)[:6]
+    from math import ceil
+    return int(ceil(sum(top6) / len(top6)))
+
+def aggregate_rounds_from_tournaments(tournaments):
+    out = {}
     for tid, t in tournaments.items():
-        tdate = t.get("date", "") or ""
-        tname = t.get("name", "")
-        results: Dict[str, List[float]] = t.get("results", {})
-        for pid, scores in (results or {}).items():
-            for s in scores or []:
-                try:
-                    sc = float(s)
-                except Exception:
-                    sc = 0.0
-                out.setdefault(pid, []).append(
-                    {"score": sc, "date": tdate, "tournament_id": tid, "tournament_name": tname}
-                )
+        res = t.get("results", {}) or {}
+        for pid, scores in res.items():
+            out.setdefault(pid, [])
+            for s in scores:
+                try: out[pid].append(float(s))
+                except: out[pid].append(0.0)
     return out
 
-def quota_current_from_recent_rounds(
-    rounds: List[Dict[str, Any]],
-    initial_quota: float | int = 18,
-) -> int:
-    """
-    Compute CURRENT quota = average of best 6 of the most recent 9 scores, rounded UP to nearest whole.
-    Recency is determined by 'date' descending; empty/invalid dates go last.
-    """
-    if not rounds:
-        return int(initial_quota)
+# ===================== Session State =====================
+if "is_admin" not in st.session_state:
+    st.session_state.is_admin = False
 
-    def _date_key(r):
-        d = (r.get("date") or "").strip()
-        # Empty strings sort last
-        return d
+# ===================== Sidebar Navigation =====================
+st.sidebar.title("Navigation")
+public_pages = ["Public Board", "Player Lookup", "Tournaments", "Admin (PIN Login)"]
+admin_pages = ["Upload Results (CSV)", "Manage Players", "Reports", "Backup/Restore"]
 
-    # Sort newest first by ISO date (YYYY-MM-DD); empty dates at end
-    sorted_recent = sorted(rounds, key=_date_key, reverse=True)
-    # Take most recent 9 scores
-    recent_scores = [float(r.get("score", 0.0)) for r in sorted_recent[:9]]
-    # Keep best 6
-    best6 = sorted(recent_scores, reverse=True)[:6]
-    if not best6:
-        return int(initial_quota)
-    avg = sum(best6) / len(best6)
-    return _round_up(avg)
-
-def ensure_session():
-    if "is_admin" not in st.session_state:
-        st.session_state.is_admin = False
-    if "data" not in st.session_state:
-        st.session_state.data = load_data()
-
-ensure_session()
-data = st.session_state.data
-
-# ---------------------- Header ----------------------
-st.markdown('<div class="app-header"><h2>GolfQuota — Club Quotas & Results</h2></div>', unsafe_allow_html=True)
-
-# ---------------------- Sidebar Navigation ----------------------
-st.sidebar.markdown("### Navigation")
 page = st.sidebar.selectbox(
-    "Go to",
-    [
-        "Public Board",
-        "Player Lookup",
-        "Tournaments",
-        "Upload Results (CSV)",
-        "Reports",
-        "Backup/Restore",
-        "Admin (Login)",
-    ],
+    "Go to:",
+    public_pages + admin_pages if st.session_state.is_admin else public_pages
 )
 
-# ---------------------- Public Board ----------------------
+# ===================== Public Board =====================
 if page == "Public Board":
-    st.markdown("#### Public Board — Current Quotas")
-    st.caption("Read-only view for members and guests. Shows current quota, tees, and rounds played.")
-
-    # Aggregate player rounds by looking at tournaments
-    rounds_by_player = aggregate_player_rounds_from_tournaments(data.get("tournaments", {}))
+    st.header("🏌️ Public Quota Board (Read-Only)")
+    rounds_by_player = aggregate_rounds_from_tournaments(data.get("tournaments", {}))
 
     rows = []
     for pid, p in data.get("players", {}).items():
-        pname = (p.get("name", "") or "").upper()
-        player_rounds = rounds_by_player.get(pid, [])
-        quota = quota_current_from_recent_rounds(player_rounds, p.get("initial_quota", 18))
-        rows.append(
-            {
-                "PLAYER": pname,
-                "TEES": tee_for_age(p.get("age", 65)),
-                "ROUNDS": len(player_rounds),
-                "CURRENT QUOTA": quota,
-            }
-        )
+        pname = (p.get("name", "") or "").title()
+        scores = rounds_by_player.get(pid, [])
+        quota = current_quota(scores, p.get("initial_quota", 18))
+        rows.append({
+            "Player": pname,
+            "Tees": tee_for_age(p.get("age", 65)),
+            "Rounds": len(scores),
+            "Current Quota": quota
+        })
+    df = pd.DataFrame(rows)
+    st.dataframe(df.sort_values("Player") if not df.empty else df, use_container_width=True)
 
-    import pandas as pd
-    df = pd.DataFrame(rows) if rows else pd.DataFrame(columns=["PLAYER", "TEES", "ROUNDS", "CURRENT QUOTA"])
-    if df.empty:
-        st.info("No players yet. Admins can upload results in **Upload Results (CSV)**.")
-    else:
-        st.dataframe(df.sort_values(by=["PLAYER"]), use_container_width=True)
-
-    st.write("---")
-    st.markdown(f'<span class="blue-chip">Need to manage data?</span> Use the sidebar → **Admin (Login)**', unsafe_allow_html=True)
-
-
-# ---------------------- Player Lookup ----------------------
+# ===================== Player Lookup =====================
 elif page == "Player Lookup":
-    st.markdown("#### Player Lookup")
-    st.caption("Search a player to see quota details and recent tournaments.")
-    all_players = data.get("players", {})
-    options = sorted([(pid, p.get("name", "")) for pid, p in all_players.items()], key=lambda x: x[1].casefold())
+    st.header("🔎 Player Lookup")
+    st.caption("View player history, tournaments, and quota calculation.")
 
-    if not options:
-        st.info("No players yet.")
+    # Build display list
+    players = data.get("players", {})
+    display_names = sorted([(pid, p["name"]) for pid, p in players.items()], key=lambda x: x[1].lower())
+    if not display_names:
+        st.info("No players found.")
+        st.stop()
+
+    sel_name = st.selectbox("Select player", [n for _, n in display_names])
+    pid = next(pid for pid, n in display_names if n == sel_name)
+    p = players[pid]
+
+    pname = p["name"].title()
+    st.subheader(pname)
+
+    # Show tournaments (newest first)
+    ts = data.get("tournaments", {})
+    tournaments = sorted(ts.items(), key=lambda x: (x[1].get("date", "") or ""), reverse=True)
+    rows = []
+    for tid, t in tournaments:
+        if pid in t.get("results", {}):
+            scores = t["results"][pid]
+            rows.append({
+                "Date": t.get("date", ""),
+                "Tournament": t.get("name", ""),
+                "Round 1": scores[0] if len(scores) > 0 else "",
+                "Round 2": scores[1] if len(scores) > 1 else "",
+                "Round 3": scores[2] if len(scores) > 2 else "",
+            })
+    if rows:
+        st.markdown("##### Recent Tournaments")
+        st.dataframe(pd.DataFrame(rows), use_container_width=True)
     else:
-        name_map = {f"{n} (ID:{pid[:6]})": pid for pid, n in options}
-        choice = st.selectbox("Select player", list(name_map.keys()))
-        pid = name_map[choice]
-        p = all_players.get(pid, {})
-        pname_uc = (p.get("name", "") or "").upper()
+        st.info("No tournaments found for this player.")
 
-        st.markdown(f"### {pname_uc}")
-        rounds_by_player = aggregate_player_rounds_from_tournaments(data.get("tournaments", {}))
-        prounds = rounds_by_player.get(pid, [])
+    # Quota calculation: last 9 → best 6
+    flat_scores = []
+    for tid, t in ts.items():
+        date = t.get("date", "")
+        name = t.get("name", "")
+        for s in t.get("results", {}).get(pid, []):
+            try:
+                val = float(s)
+                flat_scores.append({"Date": date, "Tournament": name, "Score": val})
+            except:
+                pass
+    flat_scores = sorted(flat_scores, key=lambda r: r["Date"], reverse=True)[:9]
 
-        # Current quota (best 6 of most recent 9), rounded up
-        curr_quota = quota_current_from_recent_rounds(prounds, p.get("initial_quota", 18))
-        st.metric("Current Quota", f"{curr_quota}")
+    if flat_scores:
+        from math import ceil
+        top6 = sorted([r["Score"] for r in flat_scores], reverse=True)[:6]
+        avg = sum(top6) / len(top6)
+        quota_now = ceil(avg)
+        df9 = pd.DataFrame(flat_scores)
+        df9["Kept (Top 6)"] = df9["Score"].isin(top6)
+        st.markdown("##### Quota Calculation (Most-Recent 9 → Keep Top 6)")
+        st.dataframe(df9, use_container_width=True)
+        st.metric("Current Quota (rounded up)", f"{quota_now}")
+        st.caption(f"Top 6 kept: {top6} → average = {avg:.2f} → rounded up = {quota_now}")
+    else:
+        st.metric("Current Quota", f"{p.get('initial_quota', 18)}")
+        st.caption("No recorded scores yet.")
 
-        # Show last 5 tournaments (newest first)
-        import pandas as pd
-        recent = sorted(prounds, key=lambda r: r.get("date", ""), reverse=True)[:5]
-        if not recent:
-            st.info("No tournaments found for this player.")
-        else:
-            display = []
-            for r in recent:
-                display.append(
-                    {
-                        "DATE": r.get("date", ""),
-                        "TOURNAMENT": r.get("tournament_name", ""),
-                        "SCORE": r.get("score", 0),
-                    }
-                )
-            st.markdown("##### Recent Tournaments")
-            dfr = pd.DataFrame(display)
-            st.dataframe(dfr, use_container_width=True)
-
-        # Explain best-6-of-9 calculation (which scores were used)
-        # Build recent 9 and top6 listing for transparency
-        rec9 = sorted(prounds, key=lambda r: r.get("date", ""), reverse=True)[:9]
-        top6 = sorted([float(x.get("score", 0.0)) for x in rec9], reverse=True)[:6]
-        if rec9:
-            st.markdown("##### Best 6 of Most-Recent 9 — Calculation")
-            st.write(f"Recent 9 scores (by date): {[float(x.get('score', 0.0)) for x in rec9]}")
-            st.write(f"Top 6 kept: {top6} → Average (rounded up): **{_round_up(sum(top6)/len(top6) if top6 else 0)}**")
-
-
-# ---------------------- Tournaments (view only) ----------------------
+# ===================== Tournaments (with delete for admin) =====================
 elif page == "Tournaments":
-    st.markdown("#### Tournaments (Newest first)")
+    st.header("🏆 Tournaments")
     ts = data.get("tournaments", {})
     if not ts:
         st.info("No tournaments yet.")
     else:
-        # sort by date desc
-        sorted_ts = sorted(ts.items(), key=lambda x: (x[1].get("date", "") or ""), reverse=True)
-        for tid, t in sorted_ts:
-            st.markdown(
-                f'<div class="section-card"><b>{t.get("name","(Unnamed)")}</b> '
-                f'— <span class="blue-chip">{t.get("date","No date") or "No date"}</span></div>',
-                unsafe_allow_html=True,
-            )
-
-
-# ---------------------- Upload Results (CSV) ----------------------
-elif page == "Upload Results (CSV)":
-    if not st.session_state.is_admin:
-        st.warning("Admin only. Please log in.")
-    else:
-        import pandas as pd
-        import io
-        from datetime import datetime
-        from rapidfuzz import process, fuzz
-        import uuid
-
-        st.subheader("Upload Tournament Results from CSV")
-        st.markdown("""
-**CSV must contain:** `Tournament_Name`, `Player_Name`, `Round_1`, `Round_2`, `Round_3`  
-*(Optional)*: `Tournament_Date` (MM/DD/YYYY).  
-Only **unmatched/uncertain** players will appear for correction.
-""")
-
-        # Template
-        tmpl = io.BytesIO()
-        tmpl.write(
-            b"Tournament_Name,Player_Name,Round_1,Round_2,Round_3,Tournament_Date\n"
-            b"Spring Championship,John Smith,8,12,7,03/15/2024\n"
-            b"Spring Championship,Mary Johnson,15,18,14,03/15/2024\n"
-            b"Spring Championship,Bob Wilson,6,9,11,03/15/2024\n"
-        )
-        tmpl.seek(0)
-        st.download_button("Download CSV Template", data=tmpl, file_name="tournament_results_template.csv", mime="text/csv")
-
-        st.write("---")
-        tname_override = st.text_input("Tournament Name (optional, overrides CSV)")
-        tdate_override = st.date_input("Tournament Date (optional)")
-
-        up = st.file_uploader("Upload CSV", type=["csv"])
-
-        def _mmddyyyy_to_iso(s: str) -> str:
-            s = (s or "").strip()
-            if not s:
-                return ""
-            try:
-                return datetime.strptime(s, "%m/%d/%Y").strftime("%Y-%m-%d")
-            except Exception:
-                return ""
-
-        if up is not None:
-            try:
-                df = pd.read_csv(up, dtype=str).fillna("")
-            except Exception as e:
-                st.error(f"Failed to read CSV: {e}")
-                df = None
-
-            if df is not None:
-                cols = {c.strip().lower(): c for c in df.columns}
-                required = ["tournament_name", "player_name", "round_1", "round_2", "round_3"]
-                missing = [r for r in required if r not in cols]
-                if missing:
-                    st.error(f"Missing required columns: {', '.join(missing)}")
-                else:
-                    st.caption("Preview of uploaded file:")
-                    st.dataframe(df.head(), use_container_width=True)
-
-                    # Build name map
-                    name_to_pid = { (p.get("name","").strip().lower()): pid for pid, p in data.get("players", {}).items() }
-
-                    unmatched = []
-                    matched_rows: List[Tuple[str, str, float, str]] = []  # (csv_name, matched_key, score, pid)
-                    for _, row in df.iterrows():
-                        pname = str(row[cols["player_name"]]).strip()
-                        if not pname:
-                            continue
-                        # fuzzy match
-                        match = process.extractOne(pname.lower(), name_to_pid.keys(), scorer=fuzz.WRatio)
-                        if match and match[1] >= 90:
-                            matched_rows.append((pname, match[0], float(match[1]), name_to_pid[match[0]]))
-                        else:
-                            unmatched.append(pname)
-
-                    corrections = {}
-                    if unmatched:
-                        st.warning(f"{len(unmatched)} player(s) need attention. Fix them below before applying.")
-                        for raw in sorted(set(unmatched), key=str.casefold):
-                            suggestion = process.extractOne(raw.lower(), name_to_pid.keys(), scorer=fuzz.WRatio)
-                            suggested_name = suggestion[0].title() if suggestion else ""
-                            confidence = int(suggestion[1]) if suggestion else 0
-
-                            st.write("---")
-                            st.markdown(f"**Unmatched Player:** `{raw}`  &nbsp; "
-                                        f"<span class='blue-chip'>Suggested: {suggested_name or '—'} ({confidence}%)</span>",
-                                        unsafe_allow_html=True)
-                            c1, c2 = st.columns([2, 2])
-                            with c1:
-                                final_name = st.text_input(f"Confirm/Correct name for '{raw}'", value=suggested_name, key=f"fix_{raw}")
-                            with c2:
-                                action = st.radio(f"Action for {raw}", ["Accept (match/create)", "Skip"], horizontal=True, key=f"act_{raw}")
-                            corrections[raw] = {"final_name": (final_name or raw).strip(), "action": action}
-
-                    if st.button("Apply Upload"):
-                        applied = 0
-                        created_tournaments = 0
-                        added_players = 0
-
-                        for _, row in df.iterrows():
-                            # Tournament meta
-                            tname = tname_override or str(row[cols["tournament_name"]]).strip()
-                            tdate_csv = str(row[cols["tournament_date"]]).strip() if "tournament_date" in cols else ""
-                            tdate_iso = _mmddyyyy_to_iso(str(tdate_override)) if tdate_override else _mmddyyyy_to_iso(tdate_csv)
-
-                            if not tname:
-                                # Skip rows with no tournament name
-                                continue
-
-                            key_name = tname.strip().lower()
-                            tid = f"{key_name}|{tdate_iso}" if tdate_iso else key_name
-                            if tid not in data["tournaments"]:
-                                data["tournaments"][tid] = {"name": tname, "date": tdate_iso, "results": {}}
-                                created_tournaments += 1
-
-                            # Player resolve
-                            raw_name = str(row[cols["player_name"]]).strip()
-                            if raw_name in corrections:
-                                if corrections[raw_name]["action"].startswith("Skip"):
-                                    continue
-                                final_name = corrections[raw_name]["final_name"]
-                            else:
-                                final_name = raw_name
-
-                            pid = name_to_pid.get(final_name.lower())
-                            if not pid:
-                                # Create new player persistently
-                                pid = str(uuid.uuid4())[:8]
-                                data["players"][pid] = {
-                                    "name": final_name.title(),
-                                    "age": 65,
-                                    "initial_quota": 18,
-                                    "rounds": [],  # reserved; we compute from tournaments
-                                }
-                                name_to_pid[final_name.lower()] = pid
-                                added_players += 1
-
-                            # Scores
-                            def _f(x):
-                                try:
-                                    return float(x)
-                                except Exception:
-                                    return 0.0
-                            scores = [_f(row[cols["round_1"]]), _f(row[cols["round_2"]]), _f(row[cols["round_3"]])]
-
-                            data["tournaments"][tid]["results"][pid] = scores
-                            applied += 1
-
-                        save_data(data)
-                        st.success(
-                            f"Applied **{applied}** rows. "
-                            f"Created **{created_tournaments}** tournament(s). "
-                            f"Added **{added_players}** player(s)."
-                        )
-
-
-# ---------------------- Reports ----------------------
-elif page == "Reports":
-    if not st.session_state.is_admin:
-        st.warning("Admin only. Please log in.")
-    else:
-        st.subheader("Reports — Current Quotas")
-        rounds_by_player = aggregate_player_rounds_from_tournaments(data.get("tournaments", {}))
-        rows = []
-        for pid, p in data.get("players", {}).items():
-            rows.append({
-                "PLAYER": (p.get("name","") or "").upper(),
-                "TEES": tee_for_age(p.get("age", 65)),
-                "ROUNDS": len(rounds_by_player.get(pid, [])),
-                "CURRENT QUOTA": quota_current_from_recent_rounds(rounds_by_player.get(pid, []), p.get("initial_quota", 18)),
-            })
-        import pandas as pd
-        dfr = pd.DataFrame(rows) if rows else pd.DataFrame(columns=["PLAYER", "TEES", "ROUNDS", "CURRENT QUOTA"])
-        st.dataframe(dfr.sort_values(by=["PLAYER"]) if not dfr.empty else dfr, use_container_width=True)
-        if not dfr.empty:
-            st.download_button("Download Report (CSV)", dfr.to_csv(index=False).encode("utf-8"),
-                               file_name="report_current_quotas.csv", mime="text/csv")
-
-
-# ---------------------- Backup / Restore ----------------------
-elif page == "Backup/Restore":
-    if not st.session_state.is_admin:
-        st.warning("Admin only. Please log in.")
-    else:
-        st.subheader("Backup & Restore")
-        raw = json.dumps(data, indent=2).encode("utf-8")
-        st.download_button("Download golf_data.json", data=raw, file_name="golf_data.json", mime="application/json")
-
-        st.write("---")
-        st.write("**Restore from a JSON backup**")
-        up = st.file_uploader("Upload golf_data.json", type=["json"], key="restore_json_admin")
-        if up is not None:
-            try:
-                new_data = json.loads(up.read().decode("utf-8"))
-                if "players" in new_data and "tournaments" in new_data:
-                    st.session_state.data = new_data
-                    data.clear()
-                    data.update(new_data)
+        for tid, t in sorted(ts.items(), key=lambda x: (x[1].get("date", "") or ""), reverse=True):
+            st.subheader(f"{t.get('name', '(Unnamed)')} — {t.get('date', 'No date')}")
+            rows = []
+            for pid, scores in t.get("results", {}).items():
+                pname = data["players"].get(pid, {}).get("name", "Unknown")
+                rows.append({
+                    "Player": pname.title(),
+                    "Round 1": scores[0] if len(scores) > 0 else "",
+                    "Round 2": scores[1] if len(scores) > 1 else "",
+                    "Round 3": scores[2] if len(scores) > 2 else "",
+                })
+            st.dataframe(pd.DataFrame(rows), use_container_width=True)
+            if st.session_state.is_admin:
+                if st.button(f"Delete {t.get('name','(Unnamed)')}", key=f"del_{tid}", type="primary"):
+                    del data["tournaments"][tid]
                     save_data(data)
-                    st.success("Data restored.")
+                    st.success("Tournament deleted.")
+                    st.experimental_rerun()
+
+# ===================== Upload Results (CSV) =====================
+elif page == "Upload Results (CSV)" and st.session_state.is_admin:
+    st.header("📤 Upload Tournament Results (CSV)")
+    st.caption("Format: Tournament_Name, Player_Name, Round_1, Round_2, Round_3, Tournament_Date")
+
+    file = st.file_uploader("Upload CSV", type=["csv"])
+    if file:
+        df = pd.read_csv(file, dtype=str)
+        df.columns = [c.strip().replace("\ufeff", "").lower() for c in df.columns]
+        required = ["tournament_name", "player_name", "round_1", "round_2", "round_3"]
+        if any(r not in df.columns for r in required):
+            st.error(f"Missing columns. Found: {df.columns.tolist()}")
+            st.stop()
+
+        st.dataframe(df.head(), use_container_width=True)
+
+        name_to_pid = {p["name"].lower(): pid for pid, p in data["players"].items()}
+        existing_names = [p["name"] for p in data["players"].values()]
+        unmatched = [str(r["player_name"]).strip() for _, r in df.iterrows()
+                     if str(r["player_name"]).strip().lower() not in name_to_pid]
+
+        corrections = {}
+        if unmatched:
+            st.warning(f"{len(unmatched)} unmatched player(s). Resolve below:")
+            for raw in sorted(set(unmatched)):
+                st.write("---")
+                st.markdown(f"**Unmatched:** `{raw}`")
+                matches = process.extract(raw, existing_names, scorer=fuzz.token_sort_ratio, limit=5)
+                suggested = [m[0] for m in matches if m[1] >= 70]
+                if suggested:
+                    st.caption("Suggested: " + ", ".join(suggested))
+
+                mode = st.radio(f"Action for {raw}",
+                                ["Match to Existing Player", "Add New Player"],
+                                key=f"mode_{raw}", horizontal=True)
+
+                if mode == "Match to Existing Player" and existing_names:
+                    pick = st.selectbox(f"Select existing player for {raw}",
+                                        options=existing_names, key=f"pick_{raw}")
+                    corrections[raw] = {"action": "match", "final_name": pick}
                 else:
-                    st.error("Invalid JSON format (missing 'players'/'tournaments').")
-            except Exception as e:
-                st.error(f"Failed to load JSON: {e}")
+                    new_name = st.text_input(f"Enter new name for {raw}",
+                                             value=raw.title(), key=f"new_{raw}")
+                    corrections[raw] = {"action": "create", "final_name": new_name}
 
+        if st.button("Apply Upload"):
+            applied = created = added = 0
+            for _, row in df.iterrows():
+                tname = str(row.get("tournament_name", "")).strip()
+                tdate_raw = str(row.get("tournament_date", "")).strip()
+                tdate = _normalize_date(tdate_raw) or datetime.today().strftime("%Y-%m-%d")
+                tid = f"{tname.lower()}|{tdate}"
 
-# ---------------------- Admin Login ----------------------
-elif page == "Admin (Login)":
-    st.subheader("Admin Login")
-    if st.session_state.is_admin:
-        st.success("You are already logged in.")
-        st.write("Use the sidebar to access admin pages (Upload, Reports, Backup/Restore).")
-        with st.expander("Admin PIN settings", expanded=False):
-            st.caption("You can set or change a numeric PIN stored in golf_data.json → settings.admin_pin.")
-            new_pin = st.text_input("Set new PIN (numbers recommended)", type="password")
-            if st.button("Save PIN"):
-                data.setdefault("settings", {})
-                data["settings"]["admin_pin"] = new_pin.strip()
+                if tid not in data["tournaments"]:
+                    data["tournaments"][tid] = {"name": tname, "date": tdate, "results": {}}
+                    created += 1
+
+                pname = str(row.get("player_name", "")).strip()
+                pid = name_to_pid.get(pname.lower())
+                if not pid and pname in corrections:
+                    fix = corrections[pname]
+                    if fix["action"] == "match":
+                        pid = name_to_pid.get(fix["final_name"].lower())
+                    elif fix["action"] == "create":
+                        pid = str(uuid.uuid4())[:8]
+                        nm = fix["final_name"].title()
+                        data["players"][pid] = {"name": nm, "age": 65, "initial_quota": 18, "rounds": []}
+                        name_to_pid[nm.lower()] = pid
+                        added += 1
+                if not pid:
+                    continue
+
+                scores = [float(row.get(f"round_{i}", 0) or 0) for i in range(1, 4)]
+                data["tournaments"][tid]["results"][pid] = scores
+                applied += 1
+
+            save_data(data)
+            st.success(f"Applied {applied} rows — Created {created} tournaments — Added {added} players.")
+
+# ===================== Manage Players =====================
+elif page == "Manage Players" and st.session_state.is_admin:
+    st.header("🧑‍💼 Manage Players")
+    for pid, p in sorted(data["players"].items(), key=lambda x: x[1]["name"].lower()):
+        with st.expander(p["name"].title()):
+            new_name = st.text_input("Name", p["name"], key=f"name_{pid}")
+            new_age = st.number_input("Age", min_value=10, max_value=100, value=int(p.get("age", 65)), key=f"age_{pid}")
+            new_quota = st.number_input("Initial Quota", min_value=0, max_value=60, value=int(p.get("initial_quota", 18)), key=f"quota_{pid}")
+            if st.button("Save", key=f"save_{pid}"):
+                p.update({"name": new_name.title(), "age": new_age, "initial_quota": new_quota})
                 save_data(data)
-                st.success("Admin PIN updated.")
-        if st.button("Log out now"):
+                st.success("Updated.")
+
+# ===================== Reports =====================
+elif page == "Reports" and st.session_state.is_admin:
+    st.header("📊 Reports")
+
+    # Player Quotas
+    st.subheader("Player Quotas")
+    rounds_by_player = aggregate_rounds_from_tournaments(data.get("tournaments", {}))
+    rows = []
+    for pid, p in data["players"].items():
+        scores = rounds_by_player.get(pid, [])
+        rows.append({
+            "Player": p["name"].title(),
+            "Tees": tee_for_age(p.get("age", 65)),
+            "Rounds": len(scores),
+            "Quota": current_quota(scores, p.get("initial_quota", 18))
+        })
+    st.dataframe(pd.DataFrame(rows).sort_values("Player"), use_container_width=True)
+
+    # Tournament Summary
+    st.subheader("Tournament Summary")
+    ts = data.get("tournaments", {})
+    summary = [{"Tournament": t["name"], "Date": t["date"], "Players": len(t["results"])} for t in ts.values()]
+    st.dataframe(pd.DataFrame(summary).sort_values("Date", ascending=False), use_container_width=True)
+
+# ===================== Backup & Restore =====================
+elif page == "Backup/Restore" and st.session_state.is_admin:
+    st.header("💾 Backup & Restore")
+    raw = json.dumps(data, indent=2).encode("utf-8")
+    st.download_button("Download Backup", data=raw, file_name="golf_data.json", mime="application/json")
+    up = st.file_uploader("Restore Backup", type=["json"])
+    if up:
+        new_data = json.loads(up.read().decode("utf-8"))
+        if "players" in new_data and "tournaments" in new_data:
+            save_data(new_data)
+            st.session_state.data = new_data
+            st.success("Backup restored. Restart app to apply.")
+
+# ===================== Admin (PIN Login) =====================
+elif page == "Admin (PIN Login)":
+    st.header("🔐 Admin Login (PIN Only)")
+    if st.session_state.is_admin:
+        st.success("You are logged in as Admin.")
+        if st.button("Log Out"):
             st.session_state.is_admin = False
+            st.experimental_rerun()
     else:
-        st.caption("Login with username/password or PIN.")
-        tab = st.radio("Auth method", ["User/Pass", "PIN"], horizontal=True)
-        if tab == "User/Pass":
-            u = st.text_input("Username")
-            p = st.text_input("Password", type="password")
-            if st.button("Log in"):
-                if u == ADMIN_USER and p == ADMIN_PASS:
-                    st.session_state.is_admin = True
-                    st.success("Logged in. Admin pages unlocked in the sidebar.")
-                else:
-                    st.error("Invalid credentials.")
-        else:
-            pin_try = st.text_input("Admin PIN", type="password", value="")
-            if st.button("Log in with PIN"):
-                saved_pin = data.get("settings", {}).get("admin_pin", DEFAULT_ADMIN_PIN)
-                if pin_try == saved_pin:
-                    st.session_state.is_admin = True
-                    st.success("Logged in via PIN.")
-                else:
-                    st.error("Invalid PIN.")
+        pin = st.text_input("Enter PIN", type="password")
+        if st.button("Login"):
+            if pin == data.get("settings", {}).get("admin_pin", ADMIN_PIN):
+                st.session_state.is_admin = True
+                st.success("Login successful! Admin menus unlocked.")
+                st.experimental_rerun()
+            else:
+                st.error("Incorrect PIN.")

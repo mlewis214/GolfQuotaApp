@@ -1,6 +1,14 @@
+# Ignore local Python and build artifacts
 .venv/
-__pycache__/
 build/
 dist/
-GolfQuotaApp.spec
-.streamlit/secrets.toml
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.vscode/
+.DS_Store
+*.exe
+*.log
+golf_data.json
+
