@@ -4,6 +4,7 @@ import pandas as pd
 import json
 import uuid
 import os
+from pathlib import Path
 from datetime import datetime
 from rapidfuzz import process, fuzz
 
@@ -53,6 +54,17 @@ input, textarea, select {
   border-radius: 8px !important;
 }
 
+/* File uploader */
+[data-testid="stFileUploader"] section {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px dashed var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* Radio/checkbox labels */
+.stRadio label, .stCheckbox label { color: var(--fg) !important; }
+
 /* DataFrame / AgGrid style table */
 div[data-testid="stDataFrame"] div[role="grid"] {
   background: var(--bg-2) !important;
@@ -82,10 +94,74 @@ div[data-testid="stDataFrame"] div[role="grid"] {
 </style>
 """, unsafe_allow_html=True)
 
+st.markdown("""
+<style>
+/* ===== Streamlit Select / Multiselect dark-mode hardening (incl. mobile portal) ===== */
+
+/* The visible control (closed state) */
+.stSelectbox > div[data-baseweb="select"] > div,
+.stMultiSelect > div[data-baseweb="select"] > div {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* The text inside the select input */
+.stSelectbox [data-baseweb="select"] input,
+.stMultiSelect [data-baseweb="select"] input {
+  background: transparent !important;
+  color: var(--fg) !important;
+}
+
+/* Placeholder color */
+.stSelectbox [data-baseweb="select"] input::placeholder,
+.stMultiSelect [data-baseweb="select"] input::placeholder {
+  color: #cfcfcf !important;
+}
+
+/* Extra safety for placeholder/live region text */
+.stSelectbox [data-baseweb="select"] div[aria-live="polite"],
+.stMultiSelect [data-baseweb="select"] div[aria-live="polite"] {
+  color: var(--fg) !important;
+  opacity: 0.85 !important;
+}
+
+/* The dropdown menu (BaseWeb mounts in a portal layer on <body>) */
+[data-baseweb="layer"] [role="listbox"],
+[data-baseweb="menu"],
+[data-baseweb="popover"],
+div[role="listbox"] {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* Options inside the dropdown */
+[role="option"] { color: var(--fg) !important; }
+[role="option"][aria-selected="true"] { background: #2a2a2a !important; }
+[role="option"]:hover { background: #262626 !important; }
+
+/* Labels above the select */
+.stSelectbox label, .stMultiSelect label { color: var(--fg) !important; }
+
+/* iOS Safari autofill / text fill safety for the select's search input */
+@supports (-webkit-touch-callout: none) {
+  .stSelectbox [data-baseweb="select"] input,
+  .stMultiSelect [data-baseweb="select"] input {
+    -webkit-text-fill-color: var(--fg) !important;
+    caret-color: var(--fg) !important;
+  }
+}
+</style>
+""", unsafe_allow_html=True)
 
 # ===================== Data storage =====================
-DATA_FILE = "golf_data.json"
-ADMIN_PIN = "1215"
+DATA_DIR = Path("data")
+DATA_DIR.mkdir(exist_ok=True)
+DATA_FILE = str(DATA_DIR / "golf_data.json")
+ADMIN_PIN = st.secrets.get("ADMIN_PIN", "1215")
 
 def load_data():
     if os.path.exists(DATA_FILE):
@@ -98,6 +174,7 @@ def save_data(data):
         json.dump(data, f, indent=2)
 
 data = load_data()
+
 
 # ===================== Helpers =====================
 def _normalize_date(s: str) -> str:
