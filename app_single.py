@@ -12,18 +12,76 @@ st.set_page_config(page_title="Golf Quota Board", layout="wide")
 
 st.markdown("""
 <style>
-body, .stApp { background-color:#111 !important; color:#f5f5f5 !important; }
-div[data-testid="stSidebar"] { background-color:#000 !important; }
-h1,h2,h3,h4,h5,h6,label,p,div,span { color:#f5f5f5 !important; }
-div[data-testid="stDataFrame"] div[role="grid"] {
-  background:#1e1e1e; color:#f5f5f5; border:1px solid #ccc; border-radius:8px;
+:root, .stApp {
+  --bg: #111111;
+  --bg-2: #1a1a1a;
+  --fg: #f5f5f5;
+  --border: #3a3a3a;
+  --link: #9ec1ff;
 }
-.stButton>button,.stDownloadButton>button {
-  background:#1e1e1e !important; color:#f5f5f5 !important; border:1px solid #ccc !important; border-radius:10px !important;
+
+/* Global app + text colors */
+html, body, .stApp { background-color: var(--bg) !important; color: var(--fg) !important; }
+h1,h2,h3,h4,h5,h6,label,p,span,div { color: var(--fg) !important; }
+a { color: var(--link) !important; }
+
+/* Tell mobile browsers we’re using a dark color scheme */
+:root { color-scheme: dark; }
+
+/* Sidebar & header */
+div[data-testid="stSidebar"] { background-color:#000000 !important; }
+header[tabindex="-1"], [data-testid="stHeader"] { background: var(--bg) !important; }
+
+/* Buttons */
+.stButton>button, .stDownloadButton>button {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
 }
 .danger>button { border-color:#ff6b6b !important; }
+
+/* Inputs (text, number, select, multiselect, textarea, date) */
+.stTextInput input, .stNumberInput input, .stDateInput input,
+.stTextArea textarea,
+.stSelectbox div[data-baseweb="select"] > div,
+.stMultiSelect div[data-baseweb="select"] > div,
+input, textarea, select {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* DataFrame / AgGrid style table */
+div[data-testid="stDataFrame"] div[role="grid"] {
+  background: var(--bg-2) !important;
+  color: var(--fg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+}
+
+/* Code blocks */
+[data-testid="stMarkdownContainer"] code, pre {
+  background: #0b0b0b !important;
+  color: var(--fg) !important;
+}
+
+/* iOS Safari & mobile autofill fixes (prevents white-on-white) */
+@supports (-webkit-touch-callout: none) {
+  input, textarea, select {
+    background-color: var(--bg-2) !important;
+    color: var(--fg) !important;
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: var(--fg) !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--bg-2) inset !important;
+    caret-color: var(--fg) !important;
+  }
+}
 </style>
 """, unsafe_allow_html=True)
+
 
 # ===================== Data storage =====================
 DATA_FILE = "golf_data.json"
