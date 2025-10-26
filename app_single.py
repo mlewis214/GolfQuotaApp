@@ -163,6 +163,18 @@ DATA_DIR.mkdir(exist_ok=True)
 DATA_FILE = str(DATA_DIR / "golf_data.json")
 ADMIN_PIN = st.secrets.get("ADMIN_PIN", "1215")
 
+with st.expander("Admin • Restore data from JSON", expanded=False):
+    pin = st.text_input("Admin PIN", type="password")
+    up = st.file_uploader("Upload golf_data.json backup", type=["json"])
+    if up and pin == ADMIN_PIN:
+        try:
+            raw = up.getvalue().decode("utf-8")
+            obj = json.loads(raw)
+            save_data(obj)
+            st.success("Data restored. Please refresh the app.")
+        except Exception as e:
+            st.error(f"Restore failed: {e}")
+
 def load_data():
     if os.path.exists(DATA_FILE):
         with open(DATA_FILE, "r", encoding="utf-8") as f:
@@ -172,8 +184,36 @@ def load_data():
 def save_data(data):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+# --- One-time migration: copy old data file to new path if needed ---
+try:
+    OLD_DATA_FILE = "golf_data.json"  # previous location in project root
+    if not os.path.exists(DATA_FILE) and os.path.exists(OLD_DATA_FILE):
+        # Make sure data dir exists
+        Path(DATA_DIR).mkdir(exist_ok=True)
+        # Copy old file to the new persistent location
+        with open(OLD_DATA_FILE, "r", encoding="utf-8") as src, \
+             open(DATA_FILE, "w", encoding="utf-8") as dst:
+            dst.write(src.read())
+        print("Migrated golf_data.json → data/golf_data.json")
+except Exception as e:
+    print("Migration check failed:", e)
 
 data = load_data()
+
+# --- Check for post-restore or login flags (optional, prevents loops) ---
+if st.session_state.get("_just_restored"):
+    st.session_state["_just_restored"] = False
+    data = load_data()   # re-read the saved JSON so UI reflects restored data
+    st.toast("✅ Data restored from backup.")
+
+if st.session_state.get("_just_logged_in"):
+    st.session_state["_just_logged_in"] = False
+    st.toast("🔓 Admin logged in.")
+
+if st.session_state.get("_just_logged_out"):
+    st.session_state["_just_logged_out"] = False
+    st.toast("🔒 Logged out.")
+
 
 
 # ===================== Helpers =====================
@@ -456,15 +496,26 @@ elif page == "Reports" and st.session_state.is_admin:
 # ===================== Backup & Restore =====================
 elif page == "Backup/Restore" and st.session_state.is_admin:
     st.header("💾 Backup & Restore")
+
+    # Backup
     raw = json.dumps(data, indent=2).encode("utf-8")
     st.download_button("Download Backup", data=raw, file_name="golf_data.json", mime="application/json")
+
+    # Restore
     up = st.file_uploader("Restore Backup", type=["json"])
     if up:
-        new_data = json.loads(up.read().decode("utf-8"))
-        if "players" in new_data and "tournaments" in new_data:
-            save_data(new_data)
-            st.session_state.data = new_data
-            st.success("Backup restored. Restart app to apply.")
+        try:
+            new_data = json.loads(up.read().decode("utf-8"))
+            if "players" in new_data and "tournaments" in new_data:
+                save_data(new_data)                   # write to disk
+                st.session_state["_just_restored"] = True
+                st.success("Backup restored. Reloading data…")
+                safe_rerun()                          # one-time rerun
+            else:
+                st.error("Invalid backup: missing 'players' or 'tournaments'.")
+        except Exception as e:
+            st.error(f"Restore failed: {e}")
+
 
 # ===================== Admin (PIN Login) =====================
 elif page == "Admin (PIN Login)":
@@ -473,13 +524,16 @@ elif page == "Admin (PIN Login)":
         st.success("You are logged in as Admin.")
         if st.button("Log Out"):
             st.session_state.is_admin = False
-            st.experimental_rerun()
+            st.session_state["_just_logged_out"] = True
+            safe_rerun()
     else:
         pin = st.text_input("Enter PIN", type="password")
         if st.button("Login"):
             if pin == data.get("settings", {}).get("admin_pin", ADMIN_PIN):
                 st.session_state.is_admin = True
+                st.session_state["_just_logged_in"] = True
                 st.success("Login successful! Admin menus unlocked.")
-                st.experimental_rerun()
+                safe_rerun()
             else:
                 st.error("Incorrect PIN.")
+
